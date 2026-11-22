@@ -1,11 +1,13 @@
 {
   "source": "jsdom JavaScript/DOM execution; not a rendered browser test",
+  "interface_language": "English",
+  "japanese_characters": 0,
   "repetition_ui_cases": 72,
   "classification_ui_cases": 78,
   "complex_phase_and_recovery": "passed",
   "interference_buttons": "passed",
   "asymmetric_syndrome_order": "passed",
   "javascript_errors": [],
-  "hardware_counts_panel": "passed; supplied export and protocol reconstruction labeled",
-  "browser_rendering": "Not run: Chromium launch blocked by execution-environment socket restrictions. PDF renderings inspected separately."
+  "hardware_counts_panel": "passed; source and classification-only scope labeled",
+  "browser_rendering": "Not assessed by jsdom; run check:demo:browser for rendered layout checks."
 }

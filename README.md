@@ -38,7 +38,7 @@ Current materials:
 - `docs/SUBMISSION_REPORT.pdf` / `.md` / `.html`: current submission report, requirements, circuits, evidence limits, metrics, raw counts, confidence intervals and exact commands.
 - `docs/HARDWARE_JA.pdf` / `.md`: beginner Japanese explanation and three English demo sentences.
 - `docs/LIVE_PRESENTATION_EN.pdf` / `.md`: short script, demonstration steps and judge questions.
-- `docs/live-demo.html`: offline interactive Japanese state walkthrough, with a separately labeled hardware-results section.
+- `docs/live-demo.html`: offline interactive English state walkthrough, with a separately labeled hardware-results section.
 - `results/iqm-hardware-analysis/`: unchanged/normalized counts, per-case CSV, analysis, confusion matrices and exact native replay.
 - `data/iqm-comparison-01a20070/export.json`: byte-for-byte supplied new hardware export.
 - `results/iqm-comparison/`: byte-preserved original execution receipt, native definition, QPY/QASM circuits, layouts and original analysis.

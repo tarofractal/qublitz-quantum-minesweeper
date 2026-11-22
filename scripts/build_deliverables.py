@@ -1,4 +1,4 @@
-"""Regenerate report, printable PDFs and a fully offline Japanese live demo."""
+"""Regenerate reports, printable PDFs and a fully offline English live demo."""
 from __future__ import annotations
 
 import base64
@@ -338,14 +338,27 @@ def generate_demo(sim, tests):
     assert len(payload["repetition"]) == 72 and len(payload["classification"]) == 78
     template = (ROOT / "scripts/demo-template.html").read_text()
     hardware_path = RESULTS / "iqm-hardware-analysis/analysis.json"
-    badge = "IQM実機：このデモ作成時点で結果なし"
+    badge = "IQM hardware results: not yet available"
     section = ""
-    footer = ("このデモは理想シミュレーションの説明用再生です。実機ジョブの操作はREADMEで確認してください。")
+    footer = "This walkthrough replays ideal simulation states. See the README for hardware execution instructions."
     if hardware_path.is_file():
         hardware = load(hardware_path)
         groups = hardware["variants"]
         before, after = (groups[v] for v in ("original", "improved"))
-        badge = "IQM結果ファイル：2048ショットを収録"
+        shot_total = before["shots"] + after["shots"]
+        badge = f"IQM hardware results: {shot_total:,} shots"
+        provenance = hardware.get("provenance", {})
+        evidence_verified = all(provenance.get(key) is True for key in (
+            "matching_job_receipt_supplied", "receipt_counts_match_dashboard_export",
+            "calibration_linkage_verified"))
+        evidence_note = (
+            '<p class="callout mini">Execution evidence checked: the completed receipt, client-saved native '
+            'definitions, physical measurement sites and recorded calibration IDs agree. Dashboard counts '
+            'match SDK receipt counts after explicit bit-order conversion. This is a local audit of supplied '
+            'records, not a fresh server query.</p>' if evidence_verified else
+            '<p class="warning">Experiment labels are associated using the saved protocol. A matching '
+            'execution receipt and native definition have not been audited; the circuit assignment remains '
+            'a reconstruction.</p>')
         hardware_rows = []
         for pauli in ("I", "X", "Y", "Z"):
             pair = [next(row for row in group["cases"] if row["injected_error"] == pauli) for group in (before, after)]
@@ -353,21 +366,26 @@ def generate_demo(sim, tests):
                 f"<td>{round(row['classification_success_rate']*row['shots'])}/{row['shots']} = {100*row['classification_success_rate']:.2f}%</td>"
                 for row in pair) + "</tr>")
         delta = hardware["changes_against_original"]["improved"]["change_percentage_points"]
-        section = (f'<section id="hardware-results"><h2>5. 提供されたIQM実機結果</h2>'
-                   f'<p>保存済みプロトコルの回路順に対応させると、分類成功率は '
-                   f'<strong>{100*before["success_rate"]:.2f}% → {100*after["success_rate"]:.2f}%</strong>。'
-                   f'差は<strong>+{delta:.2f}ポイント</strong>です。</p>'
-                   '<p class="warning">元の送信記録は未提供です。回路の対応はRun Readyプロトコルからの再構成で、'
-                   '実際の送信記録から独立確認できていません。</p>'
-                   '<table><thead><tr><th>誤り</th><th>元の回路</th><th>改良回路</th></tr></thead><tbody>'
+        section = (f'<section id="hardware-results"><h2>5. IQM hardware results</h2>'
+                   f'<p>Syndrome-classification success: '
+                   f'<strong>{100*before["success_rate"]:.2f}% → {100*after["success_rate"]:.2f}%</strong>. '
+                   f'Absolute change: <strong>{delta:+.2f} percentage points</strong>.</p>'
+                   + evidence_note +
+                   '<table><thead><tr><th>Error</th><th>Original circuit</th><th>Improved circuit</th></tr></thead><tbody>'
                    + "".join(hardware_rows) + '</tbody></table>'
-                   '<p class="mini">全2048ショットを使用。読み出し補正・ポストセレクションなし。'
-                   'これはシンドロームから種類を正しく当てた割合で、論理状態の忠実度ではありません。'
-                   '今回のexportはキー順s0s1、Qiskit表示はs1s0。XとZの両方で確認します。</p>'
-                   f'<p class="mini muted">提供ファイルのジョブID：{html.escape(hardware["job_id"])}。'
-                   '詳しい根拠と95%区間はSUBMISSION_REPORT.pdfにあります。</p></section>')
-        footer = ("上の状態ウォークスルーは理想シミュレーションです。実機結果の節は、提供されたIQM exportの分析です。"
-                  "元の送信記録の再取得は新規ジョブを送りません。READMEのretrieve手順を使ってください。")
+                   f'<p class="mini">All {shot_total:,} shots are included, without readout mitigation or '
+                   'postselection. These results measure error-type classification from the syndrome, '
+                   'not logical-state fidelity. The export uses measurement-key order s0s1; Qiskit displays '
+                   's1s0. Both asymmetric X and Z controls are checked.</p>'
+                   f'<p class="mini muted">IQM job ID: {html.escape(hardware["job_id"])}. '
+                   'Evidence and 95% intervals: '
+                   '<a href="https://github.com/tarofractal/qublitz-quantum-minesweeper/blob/main/README.md" '
+                   'target="_blank" rel="noopener">project README</a> and '
+                   '<a href="https://github.com/tarofractal/qublitz-quantum-minesweeper/blob/main/results/iqm-hardware-analysis/receipt-audit.json" '
+                   'target="_blank" rel="noopener">receipt audit</a>.</p></section>')
+        footer = ("The state walkthrough shows ideal simulations. The hardware section analyzes the supplied "
+                  "IQM counts. Reproduce the checks from the saved artifacts using the README. Retrieving an "
+                  "existing job does not submit a new hardware experiment.")
     template = template.replace("@@HARDWARE_BADGE@@", badge).replace("@@HARDWARE_SECTION@@", section)
     template = template.replace("@@HARDWARE_FOOTER@@", footer)
     template = template.replace("@@TEST_COUNT@@", str(tests["tests"] - tests["skipped"]))

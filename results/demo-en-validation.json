@@ -1,0 +1,20 @@
+{
+  "source": "English demo localization validation; not a new quantum or hardware experiment",
+  "interface_language": "English",
+  "remaining_japanese_characters": 0,
+  "precomputed_payload_byte_identical": true,
+  "precomputed_payload_sha256": "6a24fab4ee928215abf7ecb9dc2f7a0a582aa55e928a4016d09b437390a6be45",
+  "repetition_ui_cases": 72,
+  "classification_ui_cases": 78,
+  "javascript_errors": [],
+  "syntax_checks": {
+    "generator_python": "passed",
+    "dom_validator_javascript": "passed",
+    "browser_validator_javascript": "passed"
+  },
+  "rendered_browser": {
+    "status": "not run",
+    "reason": "Chromium launch blocked by execution-environment socket restrictions; socket() operation not permitted"
+  },
+  "regenerate_command": ".venv/bin/python -c \"import runpy; b=runpy.run_path('scripts/build_deliverables.py'); b['generate_demo'](b['load'](b['RESULTS']/'submission-simulation/simulation.json'), b['load'](b['RESULTS']/'test-outcome.json'))\""
+}
