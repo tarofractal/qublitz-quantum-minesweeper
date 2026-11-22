@@ -1,0 +1,7 @@
+{
+  "archived_local_native_gate_register_mapping_signature_matches": true,
+  "archived_signature": "1e17df367dcca50e41eda17eba19180c683310630a2f0306a1a24676741841b5",
+  "reconstructed_signature": "1e17df367dcca50e41eda17eba19180c683310630a2f0306a1a24676741841b5",
+  "physical_pilot_native_circuit_match": "unknown: physical receipt/native circuit not included",
+  "target": "IQMFakeGarnetBackend offline target; topology matches calibration, not physical identity"
+}

@@ -1,0 +1,37 @@
+<!doctype html><html lang='ja'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>HARDWARE_JA</title><style>body{font:16px/1.85 system-ui,'Noto Sans JP',sans-serif;color:#1d2d3e;background:#f4f6f8;margin:0}main{max-width:1000px;background:white;margin:25px auto;padding:45px 55px}h1{font-size:34px;line-height:1.4;color:#112d46;border-bottom:4px solid #2c9a87;padding-bottom:20px}h2{font-size:23px;margin-top:44px;color:#145a58}h3{font-size:19px}code,pre{font-family:ui-monospace,monospace}code{font-size:.89em;background:#eef3f5;padding:1px 4px;border-radius:3px}pre{background:#12283e;color:#f4f9ff;padding:17px;border-radius:7px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}pre code{background:none;color:inherit;padding:0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}th,td{border:1px solid #d9e1e6;padding:10px;text-align:left;vertical-align:top}th{background:#e9f4f1;color:#134d46}.tablewrap{overflow-x:auto;margin:20px 0}img{max-width:100%;height:auto}figure{margin:28px 0}figcaption{font-size:13px;color:#52677b}a{color:#146d8e}.listitem{margin-left:12px}strong{color:#123c4f}@media(max-width:700px){main{padding:25px 18px;margin:0}h1{font-size:28px}}@media print{body{background:white}main{margin:0;padding:0;max-width:none}h2{break-after:avoid}table,figure{break-inside:avoid}pre{background:#f0f3f5;color:#112d46}a{color:inherit}}</style><main><h1>実機結果と改良点を説明するための日本語ガイド</h1>
+<h2>010も101も「違う、違う」</h2>
+<p>010は左と中央が違い、中央と右も違います。101でも同じです。「同じ」を0、「違う」を1とすると、どちらの比較結果も11になります。</p>
+<p>データが <code>alpha|010&gt;+beta|101&gt;</code> という重ね合わせなら、補助の量子ビット（アンシラ）に、両方の成分で同じ11を書きます。最後は <code>(alpha|010&gt;+beta|101&gt;)|11&gt;</code>。アンシラを読んでも、元が010か101かは分かりません。だから、この符号と許された誤りの条件では、alphaとbetaの関係を保てます。重ね合わせ全体を直接測ってよいという意味ではありません。</p>
+<h2>最小限のゲートの見方</h2>
+<p>Xは1個のビットを0と1で入れ替えます。Hは1個に作用し、0を+、1を-の重ね合わせにします。Zは1の成分の係数にだけマイナスを付けます。Yは0をi1、1を-i0に変えます。Sは1の係数にiを掛け、Sの逆操作はそれを取り消します。</p>
+<p>CZは2個に作用し、11の成分の符号だけをマイナスにします。00・01・10はそのままです。IQMのRは1個を回転させるゲートで、例えばR(pi,0)は、全体位相を除いてXと同じ入れ替えになります。CCXは制御2個と標的1個に作用し、両方の制御が1の成分だけ標的を反転します。</p>
+<p>CNOTは制御と標的の2個に作用します。制御が1の成分だけ標的を反転するので、制御・標的の順で10は11に、11は10になります。a0を0から始めてCNOT(d0,a0)、CNOT(d1,a0)を使うと、a0には2個が同じか違うかだけが残ります。a1にはd1とd2の比較を書きます。</p>
+<p>Level 1の中央Xなら、準備 → alpha000+beta111に符号化 → alpha010+beta101 → 比較11 → 中央にX → alpha000+beta111 → 復号、という順です。元の情報はd0に戻ります。訂正係が使うのは比較結果だけです。</p>
+<p>Level 2の前に1個だけ考えると、+と-はそのまま測るとどちらも半々です。Hを通すと成分が足し合わされたり打ち消されたりして、H|+&gt;=|0&gt;、H|-&gt;=|1&gt;となります。これが干渉です。3個の符号でも全員にHを掛け、<strong>そこでZを入れ</strong>、全員にもう一度Hを掛けます。HZH=Xなので、戻した0/1の基底でLevel 1のX訂正が使えます。元の状態を調べるのは復号後、準備の逆操作より前です。</p>
+<p>Level 3はYだけが入る約束です。比較で場所を探し、同じ場所にYを掛けるとYの2回で元に戻ります。Xだけだと並びは直っても相対的なマイナスが残ります。+入力の比較では、正しいY訂正の忠実度は1、Xだけでは0でした（理想シミュレーション）。</p>
+<h2>以前の75%は何を意味する？</h2>
+<p>以前の32ショットの実機ファイルでは、期待する11が24回でした。24/32=75%は、<strong>誤りの種類を正しく分類できた割合</strong>です。量子状態が75%保存された、という意味ではありません。32回と少ないため、95% Wilson区間は約57.89-86.75%です。以前の+i/Y1という設定は、文書中のコマンドからの推定です。</p>
+<h2>新しい実機ファイルでは？</h2>
+<p>8回路それぞれ256ショット、合計2048ショットです。保存済みRun Readyプロトコルの回路順に対応させると、次の結果になります。</p>
+<div class='tablewrap'><table><tr><th>誤り</th><th>元の回路</th><th>改良回路</th><th>差（ポイント）</th></tr><tr><td>I</td><td>186/256 = 72.66%</td><td>239/256 = 93.36%</td><td>+20.70</td></tr><tr><td>X</td><td>190/256 = 74.22%</td><td>231/256 = 90.23%</td><td>+16.02</td></tr><tr><td>Y</td><td>185/256 = 72.27%</td><td>226/256 = 88.28%</td><td>+16.02</td></tr><tr><td>Z</td><td>198/256 = 77.34%</td><td>225/256 = 87.89%</td><td>+10.55</td></tr></table></div>
+<p>合計は <strong>元759/1024=74.12%、改良921/1024=89.94%</strong>。差は<strong>+15.82ポイント</strong>でした。元の95%区間は71.35-76.71%、改良は87.95-91.64%、差の概算区間は+12.55-+19.07ポイントです。全ショットを使い、都合のよい結果だけ選んでいません。</p>
+<p>ただし、アップロードされた結果には回路名・実機名・配置・実行時刻がありません。<strong>回路の対応付けは、保存済みプロトコルを使った再構成です。実際の送信記録からの独立確認はまだです。</strong> 提出時は元のjob.jsonなどを回収し、名前・回路順・配置を照合します。この点を隠さず説明してください。</p>
+<h2>ビットの順番を間違えない</h2>
+<p>Level 4では4個のデータを使い、ZZZZとXXXXの比較結果だけを2個のアンシラで読みます。場所を当てたり誤りを直したりする段階ではありません。</p>
+<div class='tablewrap'><table><tr><th>誤り</th><th>人が読む順（ZZZZ,XXXX）</th><th>今回のIQM export</th><th>Qiskitの表示</th></tr><tr><td>I</td><td>00</td><td>00</td><td>00</td></tr><tr><td>X</td><td>10</td><td>10</td><td>01</td></tr><tr><td>Y</td><td>11</td><td>11</td><td>11</td></tr><tr><td>Z</td><td>01</td><td>01</td><td>10</td></tr></table></div>
+<p>今回は、文字がmeasurement_keysの並びに対応すると明示して読みました。Xの例では10、Zでは01が最も多く、どちらの回路でもこの読み方と一致します。Yの11だけでは、左右を逆に読んでも同じなので、順番の確認になりません。プログラムは順番を勝手に入れ替えて成功率を上げません。</p>
+<h2>コードで何を改良した？</h2>
+<p>符号化した情報と検査するZZZZ・XXXXは同じまま、ゲートを並べ直して接続に合う回路にしました。符号化用CNOTは4個から3個へ。検査の途中でデータ2組を一時的に変換し、短い比較をしたあと必ず変換を戻します。誤りを入れる点は、符号化が終わった直後に保っています。</p>
+<p>校正データを使い、二量子ビット操作の品質・読み出し誤り・必要な移動を合わせて配置を順位付けしました。この点数は<strong>比較用の目安</strong>です。入力や隠した誤りに応じて、有利な配置を選び直していません。</p>
+<p>保存済みオフライン回路の+i/Y1例では、CZが<strong>24個から11個</strong>、深さが<strong>45から17</strong>へ減りました。誤りが入る機会が減ることは、成績が良くなる理由の候補です。ただし、今回の結果だけで改善原因を一つに断定できません。これらの配置・ゲート数を実機の送信記録と照合する作業は残っています。</p>
+<p>今回さらに、IQM exportを安全に読み込む処理、X/Zの順序確認、元データを残す分析、再取得した実回路・校正IDの保存を追加しました。保存したQPYを読み直すと配置表示が失敗する問題も修正しました。Run Ready版の認証設定の修正も引き継いでいます。</p>
+<h2>実演で使う英語3文</h2>
+<p>We compare the original and optimized Level 4 circuits using a balanced I, X, Y, and Z protocol.</p>
+<p>Under the saved protocol&#x27;s circuit-order assignment, the supplied IQM job export gives 74.12% correct syndrome classifications for the original and 89.94% for the optimized circuit.</p>
+<p>Ideal simulations verify that both checks preserve the encoded data, while these hardware counts measure classification accuracy, not logical-state fidelity.</p>
+<h2>実演と提出までの手順</h2>
+<p><code>docs/live-demo.html</code>を開き、Level 1/+i/中央を選びます。準備から復号まで進め、途中のiの係数が最後にも残ることを見せます。下部の実機結果は、この説明用シミュレーションと区別してあります。</p>
+<p><strong>最初のコマンド：</strong> 展開したプロジェクト内で <code>bash scripts/setup.sh</code>。続けて <code>bash scripts/reproduce_submission.sh</code>。後者は新しい実機ジョブを送らず、同じ分析を再現します。</p>
+<p><strong>実際のテスト：</strong> 変更前は718件成功。更新後は744件成功、失敗・エラー・スキップ0件。全150入力/誤りケース、76800理想ショットが成功。保存済みネイティブ8回路の2048理想ショットも成功しました。</p>
+<p><strong>IQMで確認できた内容：</strong> 提供された8個の256ショットの測定結果です。上記プロトコルの対応付けなら分類成功率は74.12%から89.94%へ上がっています。量子状態の忠実度やLevels 1-3の実機訂正を測った結果ではありません。</p>
+<p><strong>提出前に残る作業：</strong> 元の送信記録・実機名・回路順・配置・校正との対応を回収して照合すること、GitHubへこのプロジェクトを掲載すること、実演を練習することです。再取得コマンドはREADMEと英語レポートにあります。新しく実機ジョブを送らなくても、今回の結果の分析は完了しています。</p></main></html>

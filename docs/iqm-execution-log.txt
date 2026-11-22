@@ -1,0 +1,93 @@
+QUBLITZ 2026 - supplied IQM execution evidence
+
+Normalized relevant command/output excerpts from the user-supplied terminal
+transcript. Line numbers in the source: pilot 793-799 and its retrieved JSON
+starting at 811; comparison 1451-1489. Original account/host prompts, local
+paths and credential-entry interactions are omitted. This text was not run
+while preparing the repository. These are user-supplied execution records,
+not a newly submitted IQM job or an independently fetched server receipt.
+
+COMPARISON
+
+$ .venv/bin/python -m minesweeper compare --mode run \
+  --url https://resonance.iqm.tech/ --computer garnet \
+  --calibration data/calibration.json --suite balanced --shots 256 \
+  --out results/iqm-comparison --prompt-token
+IQM comparison job ID: 01a20070-6eb5-7033-942a-a41474a1922e
+
+$ .venv/bin/python -m minesweeper compare --mode analyze \
+  --out results/iqm-comparison
+{
+  "source": "IQM_QPU_comparison",
+  "changes": {
+    "improved": {
+      "change_percentage_points": 15.8203125,
+      "newcombe_wilson_95_percentage_points": [
+        12.55247878351187,
+        19.06734489496457
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    }
+  }
+}
+
+ORIGINAL PILOT
+
+$ .venv/bin/python -m minesweeper iqm --mode run \
+  --level 4 --input=+i --error Y --location 1 --shots 32 \
+  --out results/iqm-pilot
+Job ID: 01a1fff5-31e3-744f-89da-cb1d14f7bacb
+
+$ .venv/bin/python -m minesweeper iqm --mode retrieve \
+  --result-file results/iqm-pilot/job.json
+{
+  "source": "IQM_QPU",
+  "job_id": "01a1fff5-31e3-744f-89da-cb1d14f7bacb",
+  "level": 4,
+  "input": "+i",
+  "expected_syndrome": [
+    1,
+    1
+  ],
+  "shots": 32,
+  "raw_counts": {
+    "11": 24,
+    "01": 3,
+    "10": 4,
+    "00": 1
+  },
+  "observed_syndrome_counts_human_order": {
+    "11": 24,
+    "10": 3,
+    "01": 4,
+    "00": 1
+  },
+  "syndrome_success_rate": 0.75,
+  "joint_success_rate": 0.75,
+  "joint_success_wilson_95": [
+    0.5789344100575552,
+    0.8674759908149096
+  ],
+  "postselection": "none",
+  "retained_shots": 32,
+  "retained_fraction": 1.0,
+  "classification_success_rate": 0.75,
+  "observed_classification_counts": {
+    "Y": 24,
+    "X": 3,
+    "Z": 4,
+    "I": 1
+  },
+  "hardware_data_fidelity": "not measured"
+}
+
+WHAT THIS DOES AND DOES NOT CONTAIN
+
+The comparison log contains its actual requested server/QPU, suite, shots,
+returned job ID, and the displayed analysis JSON. It does not display the
+complete comparison job.json, individual comparison counts, submitted native
+instructions, live layout, or run-time calibration ID. Individual dashboard
+counts are retained separately and independently reproduce the displayed gain.
+The older pilot's displayed raw_counts are Qiskit syn1syn0 strings. They are
+exactly the reversed-character histograms of its dashboard export; do not mix
+the dashboard and SDK string conventions.

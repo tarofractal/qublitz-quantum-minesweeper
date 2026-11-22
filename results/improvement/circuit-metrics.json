@@ -1,0 +1,227 @@
+{
+  "original": {
+    "ranking_score": 0.17199732010625407,
+    "calibration_negative_log_proxy": 0.14754732010625407,
+    "native_cz": 24,
+    "depth": 45,
+    "native_r": 52,
+    "syndrome_device_sites": [
+      "QB2",
+      "QB4"
+    ],
+    "estimated_duration_seconds": null,
+    "score_is_accuracy_prediction": false,
+    "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+    "plan": {
+      "variant": "original",
+      "layout": null,
+      "seed": 2026,
+      "encoder": "original",
+      "optimization_level": 1
+    },
+    "initial_source_indices": [
+      3,
+      2,
+      0,
+      1,
+      8,
+      4
+    ],
+    "final_source_indices": [
+      2,
+      8,
+      0,
+      4,
+      1,
+      3
+    ],
+    "measurement_map": [
+      {
+        "backend_qubit_index": 1,
+        "device_name": "QB2",
+        "classical_bit_index": 0,
+        "classical_registers": [
+          [
+            "syn",
+            0
+          ]
+        ]
+      },
+      {
+        "backend_qubit_index": 3,
+        "device_name": "QB4",
+        "classical_bit_index": 1,
+        "classical_registers": [
+          [
+            "syn",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "placement": {
+    "ranking_score": 0.16448127095000445,
+    "calibration_negative_log_proxy": 0.14002127095000447,
+    "native_cz": 24,
+    "depth": 46,
+    "native_r": 51,
+    "syndrome_device_sites": [
+      "QB4",
+      "QB8"
+    ],
+    "estimated_duration_seconds": null,
+    "score_is_accuracy_prediction": false,
+    "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+    "plan": {
+      "variant": "placement",
+      "layout": [
+        7,
+        2,
+        8,
+        13,
+        3,
+        12
+      ],
+      "seed": 7,
+      "encoder": "original",
+      "optimization_level": 1
+    },
+    "initial_source_indices": [
+      7,
+      2,
+      8,
+      13,
+      3,
+      12
+    ],
+    "final_source_indices": [
+      12,
+      2,
+      13,
+      8,
+      3,
+      7
+    ],
+    "measurement_map": [
+      {
+        "backend_qubit_index": 3,
+        "device_name": "QB4",
+        "classical_bit_index": 0,
+        "classical_registers": [
+          [
+            "syn",
+            0
+          ]
+        ]
+      },
+      {
+        "backend_qubit_index": 7,
+        "device_name": "QB8",
+        "classical_bit_index": 1,
+        "classical_registers": [
+          [
+            "syn",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "improved": {
+    "ranking_score": 0.11265886389220502,
+    "calibration_negative_log_proxy": 0.10148886389220502,
+    "native_cz": 11,
+    "depth": 17,
+    "native_r": 33,
+    "syndrome_device_sites": [
+      "QB1",
+      "QB10"
+    ],
+    "estimated_duration_seconds": null,
+    "score_is_accuracy_prediction": false,
+    "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+    "plan": {
+      "variant": "improved",
+      "layout": [
+        4,
+        1,
+        8,
+        3,
+        0,
+        9
+      ],
+      "seed": 7,
+      "encoder": "root3",
+      "optimization_level": 1
+    },
+    "initial_source_indices": [
+      4,
+      1,
+      8,
+      3,
+      0,
+      9
+    ],
+    "final_source_indices": [
+      4,
+      1,
+      8,
+      3,
+      0,
+      9
+    ],
+    "measurement_map": [
+      {
+        "backend_qubit_index": 0,
+        "device_name": "QB1",
+        "classical_bit_index": 0,
+        "classical_registers": [
+          [
+            "syn",
+            0
+          ]
+        ]
+      },
+      {
+        "backend_qubit_index": 9,
+        "device_name": "QB10",
+        "classical_bit_index": 1,
+        "classical_registers": [
+          [
+            "syn",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "bridge13": {
+    "ranking_score": 0.12445048870086556,
+    "calibration_negative_log_proxy": 0.11125048870086555,
+    "native_cz": 13,
+    "depth": 20,
+    "native_r": 37,
+    "syndrome_device_sites": [
+      "QB10",
+      "QB1"
+    ],
+    "estimated_duration_seconds": null,
+    "score_is_accuracy_prediction": false,
+    "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+    "plan": {
+      "variant": "bridge13",
+      "layout": [
+        3,
+        8,
+        1,
+        4,
+        9,
+        0
+      ],
+      "seed": 7,
+      "encoder": "bridge",
+      "optimization_level": 1
+    }
+  }
+}

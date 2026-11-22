@@ -1,0 +1,40 @@
+{
+  "source": "IQM_fake_backend_SIMULATION",
+  "job_id": null,
+  "level": 4,
+  "input": "+i",
+  "expected_syndrome": [
+    1,
+    1
+  ],
+  "shots": 512,
+  "raw_counts": {
+    "10": 44,
+    "00": 37,
+    "01": 58,
+    "11": 373
+  },
+  "observed_syndrome_counts_human_order": {
+    "01": 44,
+    "00": 37,
+    "10": 58,
+    "11": 373
+  },
+  "syndrome_success_rate": 0.728515625,
+  "joint_success_rate": 0.728515625,
+  "joint_success_wilson_95": [
+    0.6883982092798265,
+    0.7652295400968246
+  ],
+  "postselection": "none",
+  "retained_shots": 512,
+  "retained_fraction": 1.0,
+  "classification_success_rate": 0.728515625,
+  "observed_classification_counts": {
+    "Z": 44,
+    "I": 37,
+    "X": 58,
+    "Y": 373
+  },
+  "hardware_data_fidelity": "not measured"
+}

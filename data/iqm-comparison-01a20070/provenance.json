@@ -1,0 +1,39 @@
+{
+  "comparison_export": {
+    "filename": "export.json",
+    "sha256": "487ca5cda798d3f665c8c7616aee47b26114e0016780a8cc49e9871eb010a80b",
+    "bytes": 945
+  },
+  "challenge_pdf": {
+    "filename": "ErrorCorrectionChallenge.pdf",
+    "sha256": "28c65d30fb860f1c3dcc3e411393b1c14aef9aaca23bda2e6a17d8ca156db717",
+    "bytes": 133888
+  },
+  "calibration": {
+    "filename": "calibration-data-2026-11-21T02_43_00.580645Z (1).json",
+    "sha256": "cc477712d00657ba7b7109c51cd1db91488154cb3c83816935f7043cc041eec8",
+    "bytes": 216341
+  },
+  "run_ready_zip": {
+    "filename": "QUBLITZ_Improved_Run_Ready.zip",
+    "sha256": "bd015159f304c73b56a0408e6769d2c68688a52f218fb3f2feaf2ccaa0621730",
+    "bytes": 4010704
+  },
+  "run_ready_changes_retained": [
+    "src/minesweeper/comparison.py SDK environment-token precedence fix",
+    "src/minesweeper/hardware.py SDK environment-token precedence fix"
+  ],
+  "job_id_from_export_filename": "01a20070-6eb5-7033-942a-a41474a1922e",
+  "missing_original_receipt": [
+    "results/iqm-comparison/job.json",
+    "submission.json",
+    "iqm-job-definition.json",
+    "live native physical circuit/layout",
+    "backend identity/calibration linkage and run timestamps"
+  ],
+  "additional_receipt_search": {
+    "archive": "QUBLITZ_Improved(2).zip",
+    "sha256": "3d2da947f25dadcd75eed1cf04bd7e3c71da0c0cf23231d6ceebe9147b19536b",
+    "result": "Only IQM_fake_backend_SIMULATION job.json present; no physical comparison receipt found."
+  }
+}

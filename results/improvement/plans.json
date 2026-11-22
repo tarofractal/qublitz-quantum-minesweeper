@@ -1,0 +1,37 @@
+{
+  "original": {
+    "variant": "original",
+    "layout": null,
+    "seed": 2026,
+    "encoder": "original",
+    "optimization_level": 1
+  },
+  "placement": {
+    "variant": "placement",
+    "layout": [
+      7,
+      2,
+      8,
+      13,
+      3,
+      12
+    ],
+    "seed": 7,
+    "encoder": "original",
+    "optimization_level": 1
+  },
+  "improved": {
+    "variant": "improved",
+    "layout": [
+      4,
+      1,
+      8,
+      3,
+      0,
+      9
+    ],
+    "seed": 7,
+    "encoder": "root3",
+    "optimization_level": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "command": "python -m pytest -q",
+  "tests": 300,
+  "passed": 300,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 17.88,
+  "before_source_changes": true
+}

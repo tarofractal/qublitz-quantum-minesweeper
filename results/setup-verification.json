@@ -1,0 +1,7 @@
+{
+  "command": "bash scripts/setup.sh",
+  "exit_code": 0,
+  "fresh_project_venv": true,
+  "dependency_check": "No broken requirements found.",
+  "python": "3.12.14"
+}

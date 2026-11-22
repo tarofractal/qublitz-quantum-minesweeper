@@ -1,0 +1,7 @@
+{
+  "fresh_process": true,
+  "native_QPY_round_trip": true,
+  "seed": 49157,
+  "circuits": 39,
+  "raw_counts_identical": true
+}

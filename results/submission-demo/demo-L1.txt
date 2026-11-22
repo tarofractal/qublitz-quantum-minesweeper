@@ -1,0 +1,16 @@
+Level 1; input |+i>; injected X on 1
+Human ket order: d0 d1 d2 | a0 a1. Raw counts: v2v1v0 s1s0.
+Ancilla 0 compares left/middle; ancilla 1 compares middle/right.
+initial: (+1.000000+0.000000i)|000>|00>
+prepared: (+0.707107+0.000000i)|000>|00> + (+0.000000+0.707107i)|100>|00>
+encoded: (+0.707107+0.000000i)|000>|00> + (+0.000000+0.707107i)|111>|00>
+injected: (+0.707107+0.000000i)|010>|00> + (+0.000000+0.707107i)|101>|00>
+recovery_basis: (+0.707107+0.000000i)|010>|00> + (+0.000000+0.707107i)|101>|00>
+extracted: (+0.707107+0.000000i)|010>|11> + (+0.000000+0.707107i)|101>|11>
+recovered: (+0.707107+0.000000i)|000>|11> + (+0.000000+0.707107i)|111>|11>
+decoded: (+0.707107+0.000000i)|000>|11> + (+0.000000+0.707107i)|100>|11>
+verification: (+1.000000+0.000000i)|000>|11>
+Measured syndrome (left-middle,middle-right): (1, 1)
+Quantum-state fidelity before inverse preparation: 1.000000000000
+Raw finite-shot counts: {'000 11': 512}
+No post-selection. These are simulation results.

@@ -1,0 +1,23 @@
+{
+  "source": "ideal_Aer_of_exact_hardware_circuit",
+  "shots": 32,
+  "raw_counts": {
+    "11": 32
+  },
+  "observed_syndrome_counts_human_order": {
+    "11": 32
+  },
+  "syndrome_success_rate": 1.0,
+  "joint_success_rate": 1.0,
+  "joint_success_wilson_95": [
+    0.8928208017449293,
+    1.0
+  ],
+  "postselection": "none",
+  "retained_shots": 32,
+  "retained_fraction": 1.0,
+  "classification_success_rate": 1.0,
+  "observed_classification_counts": {
+    "Y": 32
+  }
+}

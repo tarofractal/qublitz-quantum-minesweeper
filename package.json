@@ -1,0 +1,14 @@
+{
+  "name": "quantum-minesweeper-demo-checks",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "check:demo:dom": "node scripts/check_demo_dom.cjs",
+    "check:demo:browser": "node scripts/check_demo.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.1",
+    "playwright": "1.62.1"
+  }
+}

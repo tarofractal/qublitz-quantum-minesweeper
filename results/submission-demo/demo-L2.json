@@ -1,0 +1,239 @@
+{
+  "source": "Qiskit ideal simulation",
+  "case": {
+    "source": "ideal_statevector",
+    "level": 2,
+    "input": "+i",
+    "injected_error": "Z",
+    "error_location": 1,
+    "expected_syndrome": [
+      1,
+      1
+    ],
+    "syndrome_order": "left-middle,middle-right",
+    "qiskit_raw_order": "v2v1v0 s1s0",
+    "ideal_state_fidelity": 1.0,
+    "ideal_decoded_data_fidelity": 1.0,
+    "coherent_state_fidelity": 0.9999999999999988,
+    "observed_branch_probability": 0.9999999999999989,
+    "recovery": "X",
+    "observed_syndrome": [
+      1,
+      1
+    ],
+    "ideal_syndrome_probabilities": {
+      "00": 5.577060207443596e-34,
+      "10": 1.8142106940266839e-34,
+      "01": 9.071053470133363e-35,
+      "11": 0.9999999999999989
+    }
+  },
+  "stages": {
+    "initial": [
+      {
+        "data": "000",
+        "ancillas": "00",
+        "amplitude_real": 1.0,
+        "amplitude_imag": 0.0
+      }
+    ],
+    "prepared": [
+      {
+        "data": "000",
+        "ancillas": "00",
+        "amplitude_real": 0.7071067811865475,
+        "amplitude_imag": 0.0
+      },
+      {
+        "data": "100",
+        "ancillas": "00",
+        "amplitude_real": 0.0,
+        "amplitude_imag": 0.7071067811865475
+      }
+    ],
+    "encoded": [
+      {
+        "data": "000",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "100",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "010",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "110",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "001",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "101",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "011",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "111",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      }
+    ],
+    "injected": [
+      {
+        "data": "000",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "100",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "010",
+        "ancillas": "00",
+        "amplitude_real": -0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "110",
+        "ancillas": "00",
+        "amplitude_real": -0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "001",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "101",
+        "ancillas": "00",
+        "amplitude_real": 0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      },
+      {
+        "data": "011",
+        "ancillas": "00",
+        "amplitude_real": -0.24999999999999992,
+        "amplitude_imag": -0.24999999999999992
+      },
+      {
+        "data": "111",
+        "ancillas": "00",
+        "amplitude_real": -0.24999999999999992,
+        "amplitude_imag": 0.24999999999999992
+      }
+    ],
+    "recovery_basis": [
+      {
+        "data": "010",
+        "ancillas": "00",
+        "amplitude_real": 0.7071067811865471,
+        "amplitude_imag": -2.0775690404950196e-51
+      },
+      {
+        "data": "101",
+        "ancillas": "00",
+        "amplitude_real": -2.0775690404950196e-51,
+        "amplitude_imag": 0.7071067811865471
+      }
+    ],
+    "extracted": [
+      {
+        "data": "010",
+        "ancillas": "11",
+        "amplitude_real": 0.7071067811865471,
+        "amplitude_imag": -2.0775690404950196e-51
+      },
+      {
+        "data": "101",
+        "ancillas": "11",
+        "amplitude_real": -2.0775690404950196e-51,
+        "amplitude_imag": 0.7071067811865471
+      }
+    ],
+    "recovered": [
+      {
+        "data": "000",
+        "ancillas": "11",
+        "amplitude_real": 0.7071067811865471,
+        "amplitude_imag": -2.0775690404950196e-51
+      },
+      {
+        "data": "111",
+        "ancillas": "11",
+        "amplitude_real": -2.0775690404950196e-51,
+        "amplitude_imag": 0.7071067811865471
+      }
+    ],
+    "decoded": [
+      {
+        "data": "000",
+        "ancillas": "11",
+        "amplitude_real": 0.7071067811865471,
+        "amplitude_imag": -2.0775690404950196e-51
+      },
+      {
+        "data": "100",
+        "ancillas": "11",
+        "amplitude_real": -2.0775690404950196e-51,
+        "amplitude_imag": 0.7071067811865471
+      }
+    ],
+    "verification": [
+      {
+        "data": "000",
+        "ancillas": "11",
+        "amplitude_real": 0.9999999999999993,
+        "amplitude_imag": -1.0853864861715226e-67
+      }
+    ]
+  },
+  "finite_shots": {
+    "shots": 512,
+    "raw_counts": {
+      "000 11": 512
+    },
+    "observed_syndrome_counts_human_order": {
+      "11": 512
+    },
+    "syndrome_success_rate": 1.0,
+    "joint_success_rate": 1.0,
+    "joint_success_wilson_95": [
+      0.9925530242771171,
+      0.9999999999999999
+    ],
+    "postselection": "none",
+    "retained_shots": 512,
+    "retained_fraction": 1.0,
+    "logical_return_success_rate": 1.0,
+    "all_data_return_success_rate": 1.0
+  }
+}

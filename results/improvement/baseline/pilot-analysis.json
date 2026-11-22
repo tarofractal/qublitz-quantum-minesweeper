@@ -1,0 +1,28 @@
+{
+  "source": "archived user-supplied IQM hardware export",
+  "job_id": "01a1fff5-31e3-744f-89da-cb1d14f7bacb",
+  "raw_counts": {
+    "00": 1,
+    "01": 4,
+    "10": 3,
+    "11": 24
+  },
+  "measurement_keys": [
+    "syn_2_0_0",
+    "syn_2_0_1"
+  ],
+  "shots": 32,
+  "successes": 24,
+  "syndrome_classification_success": 0.75,
+  "wilson_95": [
+    0.5789344100575552,
+    0.8674759908149096
+  ],
+  "configuration": "likely L4, +i, Y on d1; inferred from documented pilot command",
+  "configuration_verified_from_receipt": false,
+  "native_physical_circuit_available": false,
+  "physical_layout_available": false,
+  "calibration_linkage_verified": false,
+  "raw_01_10_error_types": "not assigned: physical export ordering unconfirmed",
+  "logical_state_fidelity": "not measured"
+}

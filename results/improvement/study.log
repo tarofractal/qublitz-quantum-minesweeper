@@ -1,0 +1,38 @@
+Selected fixed plans {'original': {'variant': 'original', 'layout': None, 'seed': 2026, 'encoder': 'original', 'optimization_level': 1}, 'placement': {'variant': 'placement', 'layout': (7, 2, 8, 13, 3, 12), 'seed': 7, 'encoder': 'original', 'optimization_level': 1}, 'improved': {'variant': 'improved', 'layout': (4, 1, 8, 3, 0, 9), 'seed': 7, 'encoder': 'root3', 'optimization_level': 1}}
+Exact compiled state and shot checks passed: 234 cases.
+Held-out noise seed 49157: {'original': 0.8943810096153846, 'placement': 0.900390625, 'improved': 0.9424579326923077}
+Held-out noise seed 82799: {'original': 0.892578125, 'placement': 0.8981370192307693, 'improved': 0.9375}
+{
+  "ideal_native_cases": 234,
+  "archived_local_circuit_reproduced": true,
+  "noise_balanced": {
+    "original": {
+      "shots": 4096,
+      "successes": 3672,
+      "success_rate": 0.896484375,
+      "wilson_95": [
+        0.8867806948121609,
+        0.9054450613843424
+      ]
+    },
+    "placement": {
+      "shots": 4096,
+      "successes": 3686,
+      "success_rate": 0.89990234375,
+      "wilson_95": [
+        0.8903329959119337,
+        0.908722292665574
+      ]
+    },
+    "improved": {
+      "shots": 4096,
+      "successes": 3841,
+      "success_rate": 0.937744140625,
+      "wilson_95": [
+        0.9299266208648727,
+        0.9447413476451831
+      ]
+    }
+  },
+  "new_IQM_hardware_status": "Not run on IQM hardware: no authenticated server/QPU configured in this environment."
+}

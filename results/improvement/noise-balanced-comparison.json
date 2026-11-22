@@ -1,0 +1,217 @@
+{
+  "source": "calibration-informed noise SIMULATION, two held-out seeds",
+  "raw_bit_order": "syn1syn0",
+  "shots_per_circuit": 1024,
+  "seeds": [
+    49157,
+    82799
+  ],
+  "experiments": [
+    {
+      "variant": "original",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ]
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ]
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ]
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ]
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ]
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ]
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ]
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ]
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ]
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ]
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ]
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ]
+    }
+  ],
+  "raw_counts": [
+    {
+      "01": 31,
+      "11": 20,
+      "10": 51,
+      "00": 922
+    },
+    {
+      "11": 29,
+      "00": 51,
+      "10": 29,
+      "01": 915
+    },
+    {
+      "01": 19,
+      "11": 43,
+      "00": 33,
+      "10": 929
+    },
+    {
+      "00": 33,
+      "10": 32,
+      "01": 53,
+      "11": 906
+    },
+    {
+      "11": 19,
+      "01": 41,
+      "10": 41,
+      "00": 923
+    },
+    {
+      "10": 16,
+      "00": 32,
+      "11": 46,
+      "01": 930
+    },
+    {
+      "01": 16,
+      "11": 32,
+      "00": 53,
+      "10": 923
+    },
+    {
+      "00": 27,
+      "10": 39,
+      "01": 48,
+      "11": 910
+    },
+    {
+      "11": 4,
+      "01": 24,
+      "10": 32,
+      "00": 964
+    },
+    {
+      "11": 24,
+      "10": 8,
+      "00": 29,
+      "01": 963
+    },
+    {
+      "01": 6,
+      "11": 16,
+      "00": 52,
+      "10": 950
+    },
+    {
+      "00": 8,
+      "10": 25,
+      "01": 27,
+      "11": 964
+    }
+  ]
+}

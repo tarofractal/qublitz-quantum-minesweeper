@@ -1,0 +1,12 @@
+{
+  "command": "bash scripts/reproduce_improvement.sh",
+  "exit_code": 0,
+  "regression_tests": 718,
+  "exact_native_cases": 234,
+  "heldout_noise_seeds": [
+    49157,
+    82799
+  ],
+  "new_hardware_run": false,
+  "original_hardware_export_retained": true
+}

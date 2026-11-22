@@ -1,0 +1,14 @@
+{
+  "source": "actual local execution evidence",
+  "full_reproduction_command": "bash scripts/reproduce_submission.sh",
+  "full_reproduction_exit_code": 0,
+  "tests": "744 passed; 0 failures/errors/skips",
+  "pre_import_tests": "718 passed; Run Ready 718 passed",
+  "challenge_suite": "150/150 cases, 76800/76800 ideal shots",
+  "exact_native_packet": "8/8 circuits, 2048/2048 ideal shots",
+  "demo": "L1/L2/L3 each 512/512; L3 X-only + control fidelity 0",
+  "demo_dom": "72 repetition cases + 78 classification cases; new physical-results panel passed; no JavaScript errors",
+  "physical_counts_source": "user-supplied IQM export 01a20070-6eb5-7033-942a-a41474a1922e",
+  "new_QPU_jobs_submitted_from_this_environment": 0,
+  "circuit_assignments": "reconstructed from prepared Run Ready protocol; original receipt not supplied"
+}

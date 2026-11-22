@@ -1,0 +1,341 @@
+{
+  "created_at_utc": "2026-11-21T22:29:11.185035+00:00",
+  "software": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "qiskit": "2.1.2",
+    "qiskit-aer": "0.17.2",
+    "iqm-client": "36.0.0",
+    "numpy": "2.5.5",
+    "pytest": "9.2.0",
+    "matplotlib": "3.11.2"
+  },
+  "archived_physical_pilot": {
+    "source": "archived user-supplied IQM hardware export",
+    "job_id": "01a1fff5-31e3-744f-89da-cb1d14f7bacb",
+    "raw_counts": {
+      "00": 1,
+      "01": 4,
+      "10": 3,
+      "11": 24
+    },
+    "measurement_keys": [
+      "syn_2_0_0",
+      "syn_2_0_1"
+    ],
+    "shots": 32,
+    "successes": 24,
+    "syndrome_classification_success": 0.75,
+    "wilson_95": [
+      0.5789344100575552,
+      0.8674759908149096
+    ],
+    "configuration": "likely L4, +i, Y on d1; inferred from documented pilot command",
+    "configuration_verified_from_receipt": false,
+    "native_physical_circuit_available": false,
+    "physical_layout_available": false,
+    "calibration_linkage_verified": false,
+    "raw_01_10_error_types": "not assigned: physical export ordering unconfirmed",
+    "logical_state_fidelity": "not measured"
+  },
+  "archived_local_circuit_reproduced": true,
+  "calibration": {
+    "source": "user-supplied IQM quality-metric snapshot",
+    "sha256": "cc477712d00657ba7b7109c51cd1db91488154cb3c83816935f7043cc041eec8",
+    "device_label": "M194_F0W2114_P08_B15",
+    "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
+    "metric_set_id": "5e34cba3-680c-4861-adc0-87cf63c9c837",
+    "timestamp_utc": "2026-11-21T02:43:01.804237+00:00",
+    "age_hours_at_analysis": 19.76927385861111,
+    "qubits": 20,
+    "cz_edges": 30,
+    "cz_fidelity_range": [
+      0.9908566980292776,
+      0.9990728096572556
+    ],
+    "ignored_invalid_observations": 0,
+    "readout_implementation": "measure",
+    "heralded_metrics_used": false,
+    "pulse_durations_available": false
+  },
+  "metrics": {
+    "original": {
+      "ranking_score": 0.17199732010625407,
+      "calibration_negative_log_proxy": 0.14754732010625407,
+      "native_cz": 24,
+      "depth": 45,
+      "native_r": 52,
+      "syndrome_device_sites": [
+        "QB2",
+        "QB4"
+      ],
+      "estimated_duration_seconds": null,
+      "score_is_accuracy_prediction": false,
+      "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+      "plan": {
+        "variant": "original",
+        "layout": null,
+        "seed": 2026,
+        "encoder": "original",
+        "optimization_level": 1
+      },
+      "initial_source_indices": [
+        3,
+        2,
+        0,
+        1,
+        8,
+        4
+      ],
+      "final_source_indices": [
+        2,
+        8,
+        0,
+        4,
+        1,
+        3
+      ],
+      "measurement_map": [
+        {
+          "backend_qubit_index": 1,
+          "device_name": "QB2",
+          "classical_bit_index": 0,
+          "classical_registers": [
+            [
+              "syn",
+              0
+            ]
+          ]
+        },
+        {
+          "backend_qubit_index": 3,
+          "device_name": "QB4",
+          "classical_bit_index": 1,
+          "classical_registers": [
+            [
+              "syn",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "placement": {
+      "ranking_score": 0.16448127095000445,
+      "calibration_negative_log_proxy": 0.14002127095000447,
+      "native_cz": 24,
+      "depth": 46,
+      "native_r": 51,
+      "syndrome_device_sites": [
+        "QB4",
+        "QB8"
+      ],
+      "estimated_duration_seconds": null,
+      "score_is_accuracy_prediction": false,
+      "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+      "plan": {
+        "variant": "placement",
+        "layout": [
+          7,
+          2,
+          8,
+          13,
+          3,
+          12
+        ],
+        "seed": 7,
+        "encoder": "original",
+        "optimization_level": 1
+      },
+      "initial_source_indices": [
+        7,
+        2,
+        8,
+        13,
+        3,
+        12
+      ],
+      "final_source_indices": [
+        12,
+        2,
+        13,
+        8,
+        3,
+        7
+      ],
+      "measurement_map": [
+        {
+          "backend_qubit_index": 3,
+          "device_name": "QB4",
+          "classical_bit_index": 0,
+          "classical_registers": [
+            [
+              "syn",
+              0
+            ]
+          ]
+        },
+        {
+          "backend_qubit_index": 7,
+          "device_name": "QB8",
+          "classical_bit_index": 1,
+          "classical_registers": [
+            [
+              "syn",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "improved": {
+      "ranking_score": 0.11265886389220502,
+      "calibration_negative_log_proxy": 0.10148886389220502,
+      "native_cz": 11,
+      "depth": 17,
+      "native_r": 33,
+      "syndrome_device_sites": [
+        "QB1",
+        "QB10"
+      ],
+      "estimated_duration_seconds": null,
+      "score_is_accuracy_prediction": false,
+      "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+      "plan": {
+        "variant": "improved",
+        "layout": [
+          4,
+          1,
+          8,
+          3,
+          0,
+          9
+        ],
+        "seed": 7,
+        "encoder": "root3",
+        "optimization_level": 1
+      },
+      "initial_source_indices": [
+        4,
+        1,
+        8,
+        3,
+        0,
+        9
+      ],
+      "final_source_indices": [
+        4,
+        1,
+        8,
+        3,
+        0,
+        9
+      ],
+      "measurement_map": [
+        {
+          "backend_qubit_index": 0,
+          "device_name": "QB1",
+          "classical_bit_index": 0,
+          "classical_registers": [
+            [
+              "syn",
+              0
+            ]
+          ]
+        },
+        {
+          "backend_qubit_index": 9,
+          "device_name": "QB10",
+          "classical_bit_index": 1,
+          "classical_registers": [
+            [
+              "syn",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "bridge13": {
+      "ranking_score": 0.12445048870086556,
+      "calibration_negative_log_proxy": 0.11125048870086555,
+      "native_cz": 13,
+      "depth": 20,
+      "native_r": 37,
+      "syndrome_device_sites": [
+        "QB10",
+        "QB1"
+      ],
+      "estimated_duration_seconds": null,
+      "score_is_accuracy_prediction": false,
+      "rule": "-log conservative gate fidelities + worst-bit unheralded readout cost + 0.001*CZ + 1e-5*depth",
+      "plan": {
+        "variant": "bridge13",
+        "layout": [
+          3,
+          8,
+          1,
+          4,
+          9,
+          0
+        ],
+        "seed": 7,
+        "encoder": "bridge",
+        "optimization_level": 1
+      }
+    }
+  },
+  "ideal_native_cases": 234,
+  "ideal_cases_per_primary_variant": 78,
+  "minimum_native_data_preservation_fidelity": 0.9999999999999982,
+  "noise_balanced": {
+    "original": {
+      "shots": 4096,
+      "successes": 3672,
+      "success_rate": 0.896484375,
+      "wilson_95": [
+        0.8867806948121609,
+        0.9054450613843424
+      ]
+    },
+    "placement": {
+      "shots": 4096,
+      "successes": 3686,
+      "success_rate": 0.89990234375,
+      "wilson_95": [
+        0.8903329959119337,
+        0.908722292665574
+      ]
+    },
+    "improved": {
+      "shots": 4096,
+      "successes": 3841,
+      "success_rate": 0.937744140625,
+      "wilson_95": [
+        0.9299266208648727,
+        0.9447413476451831
+      ]
+    }
+  },
+  "noise_changes": {
+    "placement": {
+      "change_percentage_points": 0.341796875,
+      "newcombe_wilson_95_percentage_points": [
+        -0.9691810749459325,
+        1.653105031236344
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    },
+    "improved": {
+      "change_percentage_points": 4.1259765625,
+      "newcombe_wilson_95_percentage_points": [
+        2.936827641302484,
+        5.3223139533357156
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    }
+  },
+  "new_IQM_hardware_status": "Not run on IQM hardware: no authenticated server/QPU configured in this environment.",
+  "prepared_comparison_circuits": 8,
+  "prepared_shots_per_circuit": 256
+}

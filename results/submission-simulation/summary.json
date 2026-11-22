@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-11-22T00:22:49.561617+00:00",
+  "software": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "qiskit": "2.1.2",
+    "qiskit-aer": "0.17.2",
+    "iqm-client": "36.0.0",
+    "numpy": "2.5.5",
+    "pytest": "9.2.0",
+    "matplotlib": "3.11.2"
+  },
+  "seed": 2026,
+  "shots_per_case": 512,
+  "cases": 150,
+  "levels": [
+    {
+      "level": 1,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 2,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 3,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 4,
+      "cases": 78,
+      "error_configurations": 13,
+      "minimum_ideal_fidelity": 0.9999999999999989,
+      "fidelity_meaning": "data preservation after extraction",
+      "finite_shots": 39936,
+      "minimum_case_success_rate": 1.0
+    }
+  ],
+  "hardware_status": "Simulation only; physical IQM evidence is tracked separately.",
+  "postselection": "none"
+}

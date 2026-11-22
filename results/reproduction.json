@@ -1,0 +1,7 @@
+{
+  "setup_command": "bash scripts/setup.sh",
+  "setup_exit_code": 0,
+  "command": "bash scripts/reproduce.sh",
+  "exit_code": 0,
+  "environment": "fresh project virtual environment, pinned requirements-lock.txt"
+}

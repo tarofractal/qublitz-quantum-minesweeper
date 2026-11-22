@@ -1,0 +1,26 @@
+{
+  "baseline": "QUBLITZ_Improved_Run_Ready.zip",
+  "patch": "QUBLITZ_IQM_Results_Update.patch",
+  "files_changed": [
+    "README.md",
+    "data/iqm-comparison-01a20070/export.json",
+    "data/iqm-comparison-01a20070/provenance.json",
+    "docs/README_before_physical_comparison.md",
+    "scripts/analyze_hardware.py",
+    "scripts/build_deliverables.py",
+    "scripts/check_demo_dom.cjs",
+    "scripts/demo-template.html",
+    "scripts/report_submission.py",
+    "scripts/reproduce_submission.sh",
+    "src/minesweeper/__main__.py",
+    "src/minesweeper/comparison.py",
+    "src/minesweeper/comparison_analysis.py",
+    "src/minesweeper/hardware.py",
+    "src/minesweeper/iqm_export.py",
+    "src/minesweeper/simulation.py",
+    "tests/test_iqm_export.py"
+  ],
+  "git_apply_check_exit_code": 0,
+  "git_apply_exit_code": 0,
+  "all_selected_files_match": true
+}

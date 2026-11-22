@@ -1,0 +1,576 @@
+{
+  "created_at_utc": "2026-11-21T19:52:47.029187+00:00",
+  "software": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "qiskit": "2.1.2",
+    "qiskit-aer": "0.17.2",
+    "iqm-client": "36.0.0",
+    "numpy": "2.5.5",
+    "pytest": "9.2.0",
+    "matplotlib": "3.11.2"
+  },
+  "source": "IQM_fake_backend_SIMULATION",
+  "level": 4,
+  "input": "+i",
+  "injected_error": "Y",
+  "error_location": 1,
+  "expected_syndrome": [
+    1,
+    1
+  ],
+  "shots_requested": 32,
+  "seed": 2026,
+  "backend": {
+    "name": "IQMFakeGarnetBackend",
+    "num_qubits": 20,
+    "native_operations": [
+      "cz",
+      "delay",
+      "id",
+      "measure",
+      "r"
+    ],
+    "coupling_map": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        6
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        15,
+        19
+      ],
+      [
+        16,
+        11
+      ],
+      [
+        17,
+        13
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        14
+      ],
+      [
+        18,
+        19
+      ]
+    ],
+    "device_qubit_names": {
+      "0": "QB1",
+      "1": "QB2",
+      "2": "QB3",
+      "3": "QB4",
+      "4": "QB5",
+      "5": "QB6",
+      "6": "QB7",
+      "7": "QB8",
+      "8": "QB9",
+      "9": "QB10",
+      "10": "QB11",
+      "11": "QB12",
+      "12": "QB13",
+      "13": "QB14",
+      "14": "QB15",
+      "15": "QB16",
+      "16": "QB17",
+      "17": "QB18",
+      "18": "QB19",
+      "19": "QB20"
+    },
+    "measurement_map": [
+      {
+        "backend_qubit_index": 1,
+        "device_name": "QB2",
+        "classical_bit_index": 0,
+        "classical_registers": [
+          [
+            "syn",
+            0
+          ]
+        ]
+      },
+      {
+        "backend_qubit_index": 3,
+        "device_name": "QB4",
+        "classical_bit_index": 1,
+        "classical_registers": [
+          [
+            "syn",
+            1
+          ]
+        ]
+      }
+    ],
+    "dynamic_support": "not required: all measurements are terminal",
+    "compiled_operation_counts": {
+      "r": 52,
+      "cz": 24,
+      "barrier": 3,
+      "measure": 2
+    },
+    "compiled_depth": 45,
+    "architecture": {
+      "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+      "qubits": [
+        "QB1",
+        "QB2",
+        "QB3",
+        "QB4",
+        "QB5",
+        "QB6",
+        "QB7",
+        "QB8",
+        "QB9",
+        "QB10",
+        "QB11",
+        "QB12",
+        "QB13",
+        "QB14",
+        "QB15",
+        "QB16",
+        "QB17",
+        "QB18",
+        "QB19",
+        "QB20"
+      ],
+      "computational_resonators": [],
+      "gates": {
+        "prx": {
+          "implementations": {
+            "__fake": {
+              "loci": [
+                [
+                  "QB1"
+                ],
+                [
+                  "QB2"
+                ],
+                [
+                  "QB3"
+                ],
+                [
+                  "QB4"
+                ],
+                [
+                  "QB5"
+                ],
+                [
+                  "QB6"
+                ],
+                [
+                  "QB7"
+                ],
+                [
+                  "QB8"
+                ],
+                [
+                  "QB9"
+                ],
+                [
+                  "QB10"
+                ],
+                [
+                  "QB11"
+                ],
+                [
+                  "QB12"
+                ],
+                [
+                  "QB13"
+                ],
+                [
+                  "QB14"
+                ],
+                [
+                  "QB15"
+                ],
+                [
+                  "QB16"
+                ],
+                [
+                  "QB17"
+                ],
+                [
+                  "QB18"
+                ],
+                [
+                  "QB19"
+                ],
+                [
+                  "QB20"
+                ]
+              ]
+            }
+          },
+          "default_implementation": "__fake",
+          "override_default_implementation": {}
+        },
+        "cz": {
+          "implementations": {
+            "__fake": {
+              "loci": [
+                [
+                  "QB1",
+                  "QB2"
+                ],
+                [
+                  "QB1",
+                  "QB4"
+                ],
+                [
+                  "QB2",
+                  "QB5"
+                ],
+                [
+                  "QB3",
+                  "QB4"
+                ],
+                [
+                  "QB8",
+                  "QB3"
+                ],
+                [
+                  "QB4",
+                  "QB5"
+                ],
+                [
+                  "QB9",
+                  "QB4"
+                ],
+                [
+                  "QB5",
+                  "QB6"
+                ],
+                [
+                  "QB10",
+                  "QB5"
+                ],
+                [
+                  "QB6",
+                  "QB7"
+                ],
+                [
+                  "QB11",
+                  "QB6"
+                ],
+                [
+                  "QB12",
+                  "QB7"
+                ],
+                [
+                  "QB8",
+                  "QB9"
+                ],
+                [
+                  "QB8",
+                  "QB13"
+                ],
+                [
+                  "QB9",
+                  "QB10"
+                ],
+                [
+                  "QB9",
+                  "QB14"
+                ],
+                [
+                  "QB10",
+                  "QB11"
+                ],
+                [
+                  "QB10",
+                  "QB15"
+                ],
+                [
+                  "QB11",
+                  "QB12"
+                ],
+                [
+                  "QB16",
+                  "QB11"
+                ],
+                [
+                  "QB17",
+                  "QB12"
+                ],
+                [
+                  "QB13",
+                  "QB14"
+                ],
+                [
+                  "QB14",
+                  "QB15"
+                ],
+                [
+                  "QB18",
+                  "QB14"
+                ],
+                [
+                  "QB16",
+                  "QB15"
+                ],
+                [
+                  "QB19",
+                  "QB15"
+                ],
+                [
+                  "QB16",
+                  "QB17"
+                ],
+                [
+                  "QB16",
+                  "QB20"
+                ],
+                [
+                  "QB18",
+                  "QB19"
+                ],
+                [
+                  "QB19",
+                  "QB20"
+                ]
+              ]
+            }
+          },
+          "default_implementation": "__fake",
+          "override_default_implementation": {}
+        },
+        "measure": {
+          "implementations": {
+            "__fake": {
+              "loci": [
+                [
+                  "QB1"
+                ],
+                [
+                  "QB2"
+                ],
+                [
+                  "QB3"
+                ],
+                [
+                  "QB4"
+                ],
+                [
+                  "QB5"
+                ],
+                [
+                  "QB6"
+                ],
+                [
+                  "QB7"
+                ],
+                [
+                  "QB8"
+                ],
+                [
+                  "QB9"
+                ],
+                [
+                  "QB10"
+                ],
+                [
+                  "QB11"
+                ],
+                [
+                  "QB12"
+                ],
+                [
+                  "QB13"
+                ],
+                [
+                  "QB14"
+                ],
+                [
+                  "QB15"
+                ],
+                [
+                  "QB16"
+                ],
+                [
+                  "QB17"
+                ],
+                [
+                  "QB18"
+                ],
+                [
+                  "QB19"
+                ],
+                [
+                  "QB20"
+                ]
+              ]
+            }
+          },
+          "default_implementation": "__fake",
+          "override_default_implementation": {}
+        }
+      }
+    },
+    "initial_indices_of_source_wires": [
+      3,
+      2,
+      0,
+      1,
+      8,
+      4
+    ],
+    "final_indices_of_source_wires": [
+      2,
+      8,
+      0,
+      4,
+      1,
+      3
+    ]
+  },
+  "raw_measurement_order": "s1s0",
+  "local_source_check": {
+    "source": "ideal_Aer_of_exact_hardware_circuit",
+    "shots": 32,
+    "raw_counts": {
+      "11": 32
+    },
+    "observed_syndrome_counts_human_order": {
+      "11": 32
+    },
+    "syndrome_success_rate": 1.0,
+    "joint_success_rate": 1.0,
+    "joint_success_wilson_95": [
+      0.8928208017449293,
+      1.0
+    ],
+    "postselection": "none",
+    "retained_shots": 32,
+    "retained_fraction": 1.0,
+    "classification_success_rate": 1.0,
+    "observed_classification_counts": {
+      "Y": 32
+    }
+  },
+  "local_native_check": {
+    "source": "ideal_Aer_of_exact_hardware_circuit",
+    "shots": 32,
+    "raw_counts": {
+      "11": 32
+    },
+    "observed_syndrome_counts_human_order": {
+      "11": 32
+    },
+    "syndrome_success_rate": 1.0,
+    "joint_success_rate": 1.0,
+    "joint_success_wilson_95": [
+      0.8928208017449293,
+      1.0
+    ],
+    "postselection": "none",
+    "retained_shots": 32,
+    "retained_fraction": 1.0,
+    "classification_success_rate": 1.0,
+    "observed_classification_counts": {
+      "Y": 32
+    }
+  },
+  "postselection": "none",
+  "hardware_data_fidelity": "not measured",
+  "status": "prepared locally",
+  "hardware_status": "Not run on IQM hardware."
+}

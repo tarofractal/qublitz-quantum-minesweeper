@@ -1,0 +1,12 @@
+{
+  "source": "fresh Python process and QPY round-trip",
+  "same_raw_counts": true,
+  "seed": 2026,
+  "shots": 512,
+  "raw_counts": {
+    "10": 44,
+    "00": 37,
+    "01": 58,
+    "11": 373
+  }
+}

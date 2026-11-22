@@ -1,0 +1,19 @@
+{
+  "source": "user-supplied IQM quality-metric snapshot",
+  "sha256": "cc477712d00657ba7b7109c51cd1db91488154cb3c83816935f7043cc041eec8",
+  "device_label": "M194_F0W2114_P08_B15",
+  "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
+  "metric_set_id": "5e34cba3-680c-4861-adc0-87cf63c9c837",
+  "timestamp_utc": "2026-11-21T02:43:01.804237+00:00",
+  "age_hours_at_analysis": 19.763403155555554,
+  "qubits": 20,
+  "cz_edges": 30,
+  "cz_fidelity_range": [
+    0.9908566980292776,
+    0.9990728096572556
+  ],
+  "ignored_invalid_observations": 0,
+  "readout_implementation": "measure",
+  "heralded_metrics_used": false,
+  "pulse_durations_available": false
+}

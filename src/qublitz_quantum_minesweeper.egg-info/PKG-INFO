@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: qublitz-quantum-minesweeper
+Version: 1.0.0
+Summary: QUBLITZ 2026 Levels 1-4, exhaustive verification, and IQM runner
+Requires-Python: <3.13,>=3.12
+Requires-Dist: qiskit==2.1.2
+Requires-Dist: qiskit-aer==0.17.2
+Requires-Dist: numpy==2.5.5
+Provides-Extra: hardware
+Requires-Dist: iqm-client[qiskit]==36.0.0; extra == "hardware"
+Provides-Extra: dev
+Requires-Dist: pytest==9.2.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: matplotlib==3.11.2; extra == "docs"
+Requires-Dist: pylatexenc==2.11; extra == "docs"
+Requires-Dist: reportlab==5.1.0; extra == "docs"
+Requires-Dist: pypdf==7.1.1; extra == "docs"

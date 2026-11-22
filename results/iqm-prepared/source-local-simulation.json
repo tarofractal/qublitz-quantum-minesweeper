@@ -1,0 +1,51 @@
+{
+  "ideal": {
+    "source": "ideal_statevector",
+    "level": 4,
+    "input": "+i",
+    "injected_error": "Y",
+    "error_location": 1,
+    "expected_syndrome": [
+      1,
+      1
+    ],
+    "syndrome_order": "ZZZZ,XXXX",
+    "qiskit_raw_order": "s1s0",
+    "classified_error": "Y",
+    "ideal_data_preservation_fidelity": 0.9999999999999989,
+    "data_density_frobenius_difference": 2.220446049250313e-16,
+    "observed_syndrome": [
+      1,
+      1
+    ],
+    "ideal_syndrome_probabilities": {
+      "00": 0.0,
+      "10": 3.872928019572694e-37,
+      "01": 0.0,
+      "11": 0.9999999999999993
+    }
+  },
+  "finite_shots": {
+    "source": "ideal_Aer_of_exact_hardware_circuit",
+    "shots": 32,
+    "raw_counts": {
+      "11": 32
+    },
+    "observed_syndrome_counts_human_order": {
+      "11": 32
+    },
+    "syndrome_success_rate": 1.0,
+    "joint_success_rate": 1.0,
+    "joint_success_wilson_95": [
+      0.8928208017449293,
+      1.0
+    ],
+    "postselection": "none",
+    "retained_shots": 32,
+    "retained_fraction": 1.0,
+    "classification_success_rate": 1.0,
+    "observed_classification_counts": {
+      "Y": 32
+    }
+  }
+}

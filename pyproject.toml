@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qublitz-quantum-minesweeper"
+version = "1.0.0"
+description = "QUBLITZ 2026 Levels 1-4, exhaustive verification, and IQM runner"
+requires-python = ">=3.12,<3.13"
+dependencies = ["qiskit==2.1.2", "qiskit-aer==0.17.2", "numpy==2.5.5"]
+
+[project.optional-dependencies]
+hardware = ["iqm-client[qiskit]==36.0.0"]
+dev = ["pytest==9.2.0"]
+docs = ["matplotlib==3.11.2", "pylatexenc==2.11", "reportlab==5.1.0", "pypdf==7.1.1"]
+
+[project.scripts]
+minesweeper = "minesweeper.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src"]

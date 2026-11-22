@@ -1,0 +1,249 @@
+=== PAGE 1 ===
+QUBLITZ 2026
+Quantum Minesweeper
+Find the hidden errors. Save the quantum state.
+Overview
+Quantum computers are extremely sensitive to noise. Even a single error can corrupt the quantum
+information stored in a register. Quantum error correction (QEC) addresses this problem by encod-
+ing quantum information across multiple physical qubits and detecting errors without destroying
+the information being protected.
+In this challenge, your quantum register is a minefield. Errors have been secretly introduced into
+an encoded quantum state, and your job is to find and correct them.
+Using quantum circuits, syndrome measurements, and error-correction strategies, your team must
+recover the original quantum information across progressively more difficult error configurations.
+Y our objective:Successfully complete as many error-correction levels as possible, demonstrate
+your solutions through simulation, and implement your work on IQM quantum hardware.
+1. The Challenge
+Consider a logical qubit in an arbitrary state
+|ψ⟩=α|0⟩+β|1⟩,|α| 2 +|β| 2 = 1.
+By encoding this state into multiple physical qubits, we can protect it against certain quantum
+errors.
+However, somewhere in the encoded register, an error may have occurred. You do not know its
+location.
+Your task is to construct quantum circuits that:
+1. Encode and protect the logical quantum state.
+2. Extract information about errors through appropriate quantum measurements.
+3. Identify the error syndrome and determine the appropriate recovery operation.
+4. Recover the logical quantum information without destroying it.
+For each level, the possible error types are specified, but the actual error location is hidden.
+A correct solution must work for all permitted error configurations, not just one example.
+Teams are responsible for implementing their own circuits, developing appropriate tests, and demon-
+strating that their solutions work.
+1
+
+=== PAGE 2 ===
+2. Challenge Levels
+Level 1: Bit-Flip Mines
+Error type:Pauli-X(bit flip)
+Physical data qubits:3
+Goal:Correct an unknown single-qubit bit flip.
+Begin with the standard three-qubit repetition code:
+|ψL⟩=α|000⟩+β|111⟩.
+One of the three physical qubits may experience a bit-flip error:
+E1 ={I, X0, X1, X2}.
+Design a circuit that extracts the appropriate error syndrome, determines which qubit was affected,
+and recovers the original logical state.
+Your circuit must succeed regardless of which qubit experiences the error.
+Success condition:Correctly recover the logical information for every permitted bit-flip config-
+uration, including the no-error case.
+Level 2: Phase-Flip Mines
+Error type:Pauli-Z(phase flip)
+Physical data qubits:3
+Goal:Correct an unknown single-qubit phase flip.
+Bit-flip protection alone is not sufficient to protect quantum information against every type of error.
+In this level, the possible errors are
+E2 ={I, Z0, Z1, Z2}.
+Adapt the three-qubit repetition code to detect and correct phase errors.
+Hint:Consider how the Hadamard gate transforms the Pauli operators:
+HXH=Z, HZH=X.
+Success condition:Correctly recover the logical information for every permitted phase-flip con-
+figuration.
+2
+
+=== PAGE 3 ===
+Level 3: Double-Crossed Mines
+Error type:Pauli-Y(bit and phase flip)
+Physical data qubits:3
+Goal:Correct an error containing both bit-flip and phase-flip components.
+Recall that
+Y=iXZ.
+Therefore, a Pauli-Yerror introduces both a bit-flip and a phase-flip component on the same
+physical qubit.
+The possible errors are
+E3 ={I, Y0, Y1, Y2}.
+You are guaranteed that any nontrivial injected error is of typeY, but its location is unknown.
+Design a syndrome-extraction and recovery procedure that corrects these errors while preserving
+the encoded logical information.
+Success condition:Correctly recover the logical information for every permitted Pauli-Yerror
+configuration.
+Note:This level does not include independentXandZerrors on different physical qubits.
+Level 4: Mystery Mines
+Error type:Unknown Pauli error
+Suggested physical data qubits:4
+Goal:Detect and identify the type of an unknown single-qubit Pauli error.
+The minefield now contains one of three possible error types:
+E∈ {X, Y, Z}.
+Neither the error type nor its location is revealed.
+Your task is to construct an error-detection circuit that distinguishes between:
+•No error.
+•A bit-flip (X) error.
+•A phase-flip (Z) error.
+•A combined (Y) error.
+Unlike the previous levels, full error correction is not required. Instead, you must use appropriate
+syndrome measurements to identify the error type.
+A four-qubit error-detecting code provides one possible approach.
+3
+
+=== PAGE 4 ===
+Success condition:Correctly classify the error type without directly measuring and destroying
+the encoded logical information.
+Important:Identifying the error type does not necessarily identify its location. These are different
+tasks.
+3. Testing and Verification
+Teams are responsible for developing and testing their own error-correction circuits.
+For Levels 1–3, the objective is to recover the original logical quantum information.
+For Level 4, the objective is to identify the error type through syndrome information.
+Your testing should demonstrate that your implementation works across the permitted error con-
+figurations rather than relying on a single successful example.
+Testing Different Error Configurations
+A robust implementation should work regardless of which permitted error occurs.
+Teams should test different error locations, including the no-error case, and demonstrate that their
+syndrome-extraction and recovery procedures behave as expected.
+You are encouraged to develop automated tests that systematically evaluate your implementation.
+Preserving Quantum Information
+A successful implementation must protect quantum information, not merely reproduce classical
+bits.
+For example, consider testing logical states such as
+|0⟩,|1⟩,|+⟩,|−⟩,|+i⟩,| −i⟩.
+These tests help distinguish genuine quantum-state recovery from methods that only preserve
+computational-basis information.
+Teams should explain how they verify that the original quantum information has been recovered.
+Demonstrating Your Results
+During the live demonstration, teams should be prepared to show:
+•Their encoding and error-correction circuits.
+•How errors are introduced for testing.
+•How syndrome measurements reveal information about the error.
+4
+
+=== PAGE 5 ===
+•How the recovery operation is selected.
+•Evidence that the logical state is recovered.
+•Cases where their implementation succeeds or encounters limitations.
+Judges will consider both the correctness of the implementation and the team’s understanding of
+why it works.
+4. IQM Hardware Implementation
+As part of this challenge, teams will implement at least one of their quantum circuits using IQM
+quantum hardware.
+Teams are encouraged to develop and verify their circuits through classical simulation before im-
+plementing them on IQM.
+The IQM implementation and corresponding experimental results must be included in the final
+submission.
+Teams should be prepared to explain their implementation, present the results they obtained, and
+discuss any differences between simulation and experiment.
+Perfect experimental performance is not required. Understanding and explaining the behavior of
+the implemented circuit is an important part of the challenge.
+5. Challenge Requirements
+Your project must:
+•Implement a quantum error-detection or error-correction circuit.
+•Successfully demonstrate at least one challenge level.
+•Include a method for extracting and interpreting error syndromes.
+•Test the implementation across relevant error configurations.
+•Provide simulation results demonstrating the behavior of your implementation.
+•Implement at least one circuit on IQM quantum hardware.
+•Explain the underlying quantum error-correction principles.
+Teams are encouraged to attempt additional levels and explore different error-correction strategies.
+You are not required to develop a completely new quantum error-correcting code.
+Existing QEC concepts and software libraries may be used, but teams must understand and explain
+their implementations.
+AI tools are permitted.
+5
+
+=== PAGE 6 ===
+6. What to Submit
+Each team must submit:
+1.Code repository:A GitHub repository containing the source code, quantum circuits, and
+instructions needed to reproduce the project.
+2.Challenge results:A summary of completed levels, including simulation results and evi-
+dence that the proposed error-correction procedures work.
+3.IQM implementation:The circuit implemented on IQM quantum hardware, the corre-
+sponding experimental results, and a brief explanation of the observations.
+4.Live demonstration:A presentation showing how the solution works, which errors it detects
+or corrects, and the team’s design decisions.
+Teams should be prepared to demonstrate their circuits, explain their testing methods, and answer
+questions about their implementations.
+7. Assessment
+Projects will be evaluated through their submitted implementations, experimental results, and live
+demonstrations.
+Judging will emphasize the team’s understanding of quantum error correction, the correctness of
+its implementation, and the quality of its experimentation and verification.
+The following criteria will guide the evaluation.
+Technical Understanding and Correctness
+Judges will evaluate how effectively the team understands and explains its error-correction methods.
+This includes:
+•Understanding the encoding of logical quantum information into physical qubits.
+•Correct implementation and interpretation of error syndromes.
+•Understanding how recovery operations protect the logical quantum state.
+•Justifying circuit design decisions using quantum error-correction principles.
+•Explaining why the proposed methods work for the permitted error configurations.
+Teams should be prepared to walk through their circuits and explain the purpose of their individual
+components.
+Experimentation and Verification
+Judges will consider how thoroughly and thoughtfully teams test their implementations.
+6
+
+=== PAGE 7 ===
+This includes:
+•Testing different error types and locations.
+•Verifying recovery across different logical input states.
+•Comparing simulation results with theoretical expectations.
+•Investigating unsuccessful cases and implementation limitations.
+•Using experimental results to improve circuit design.
+Teams are encouraged to demonstrate both successful recovery and cases that reveal limitations of
+their methods.
+A thoughtful investigation of unexpected results can be valuable even when experimental perfor-
+mance is imperfect.
+Challenge Progression and Performance
+Judges will consider the number and difficulty of challenge levels successfully completed.
+Relevant considerations include:
+•Correctness of error detection and recovery.
+•Reliability across the permitted error configurations.
+•Successful progression to more challenging error models.
+•Preservation of logical quantum information.
+•Quality of experimental results and their interpretation.
+Successful progression through additional levels demonstrates increasing technical sophistication.
+However, completing more levels does not automatically guarantee a stronger submission.
+Correctness, understanding, and experimental verification remain important considerations.
+Creativity and Circuit Design
+Judges will consider the creativity and thoughtfulness of the team’s approach.
+Examples include:
+•Developing efficient syndrome-extraction or recovery circuits.
+•Exploring alternative encoding and correction strategies.
+•Improving circuit efficiency or reducing unnecessary operations.
+•Combining established techniques in interesting ways.
+•Designing informative experiments to investigate circuit behavior.
+7
+
+=== PAGE 8 ===
+Originality does not require inventing a new quantum error-correcting code.
+Thoughtful applications, extensions, and comparisons of existing methods are encouraged.
+Implementation and Demonstration
+Judges will evaluate the functionality, reproducibility, and clarity of the project.
+This includes:
+•Working quantum circuits and reproducible simulation results.
+•Clear organization and documentation.
+•Implementation on IQM quantum hardware.
+•Interpretation of experimental observations.
+•A successful live demonstration.
+•Ability to explain implementation details and answer technical questions.
+Teams should demonstrate not only what their circuits accomplish, but also how they verified that
+their implementations behave as intended.
+Overall Evaluation
+The challenge levels represent progressively more sophisticated quantum error-correction problems.
+A carefully implemented and thoroughly tested solution to an earlier level may demonstrate greater
+technical understanding than a more ambitious implementation whose behavior is poorly under-
+stood or insufficiently verified.
+Judges will consider the overall quality of the team’s work, including technical understanding,
+correctness, experimentation, challenge progression, creativity, and implementation.
+Above all, teams should be prepared to explain what they built, why it works, how they tested it,
+and what they learned.
+8

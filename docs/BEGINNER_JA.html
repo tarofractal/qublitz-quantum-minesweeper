@@ -1,0 +1,93 @@
+<!doctype html><html lang='ja'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BEGINNER_JA</title><style>body{font:16px/1.85 system-ui,'Noto Sans JP',sans-serif;color:#1d2d3e;background:#f4f6f8;margin:0}main{max-width:1000px;background:white;margin:25px auto;padding:45px 55px}h1{font-size:34px;line-height:1.4;color:#112d46;border-bottom:4px solid #2c9a87;padding-bottom:20px}h2{font-size:23px;margin-top:44px;color:#145a58}h3{font-size:19px}code,pre{font-family:ui-monospace,monospace}code{font-size:.89em;background:#eef3f5;padding:1px 4px;border-radius:3px}pre{background:#12283e;color:#f4f9ff;padding:17px;border-radius:7px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}pre code{background:none;color:inherit;padding:0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}th,td{border:1px solid #d9e1e6;padding:10px;text-align:left;vertical-align:top}th{background:#e9f4f1;color:#134d46}.tablewrap{overflow-x:auto;margin:20px 0}img{max-width:100%;height:auto}figure{margin:28px 0}figcaption{font-size:13px;color:#52677b}a{color:#146d8e}.listitem{margin-left:12px}strong{color:#123c4f}@media(max-width:700px){main{padding:25px 18px;margin:0}h1{font-size:28px}}@media print{body{background:white}main{margin:0;padding:0;max-width:none}h2{break-after:avoid}table,figure{break-inside:avoid}pre{background:#f0f3f5;color:#112d46}a{color:inherit}}</style><main><h1>Quantum Minesweeper：審査員に説明できるまでの日本語ガイド</h1>
+<h2>1. まず「010と101は、どちらも違う・違う」から</h2>
+<p>左・中央・右に3つの数字を並べます。</p>
+<div class='tablewrap'><table><tr><th>並び</th><th>左と中央</th><th>中央と右</th><th>比較結果</th></tr><tr><td>000</td><td>同じ</td><td>同じ</td><td>00</td></tr><tr><td>111</td><td>同じ</td><td>同じ</td><td>00</td></tr><tr><td>010</td><td>違う</td><td>違う</td><td>11</td></tr><tr><td>101</td><td>違う</td><td>違う</td><td>11</td></tr></table></div>
+<p>ここで「同じ」を0、「違う」を1と書きました。<strong>比較結果11だけを見ても、元が010なのか101なのかは分かりません。</strong> その分からなさが役立ちます。</p>
+<p>量子では「010の成分と101の成分が、両方ある状態」を扱います。たとえば <code>α|010⟩ + β|101⟩</code> です。αとβはそれぞれの成分につく係数で、測ったときの確率は大きさの2乗です。係数にはマイナスやiも入り、その違いが後の干渉に影響します。</p>
+<p>データを直接測って010か101かを知ると、両者の重ね合わせを壊してしまいます。一方、両者に共通する「比較結果11」を測るだけなら、どちらの成分かを区別しません。αとβの関係を保ったまま、中央の誤りを見つけられます。</p>
+<h2>2. この説明の量子ビットの名前</h2>
+<p>Level 1–3のデータは <code>d0=左</code>、<code>d1=中央</code>、<code>d2=右</code>。比較結果を置く補助の量子ビットが <code>a0</code>、<code>a1</code> です。この補助ビットを<strong>アンシラ</strong>と呼びます。5個とも最初は0です。</p>
+<p>説明の <code>|010⟩</code> は左からd0、d1、d2の順です。プログラムの図も上からd0、d1、d2、a0、a1です。ただしQiskitの状態ベクトルの文字列は逆順で、測定文字列も高い番号から表示します。結果の読み替えは後で具体的に確認します。</p>
+<h2>3. 使うゲートを、ひとつずつ</h2>
+<p>「ゲート」は量子ビットに作用する操作です。</p>
+<div class='tablewrap'><table><tr><th>ゲート</th><th>どこに作用する？</th><th>簡単な入力で何が起きる？</th></tr><tr><td>X</td><td>1個</td><td>0を1に、1を0にする</td></tr><tr><td>H</td><td>1個</td><td>0を <code>(0+1)/√2</code> に、1を <code>(0−1)/√2</code> にする</td></tr><tr><td>Z</td><td>1個</td><td>0の係数はそのまま、1の係数だけマイナスにする</td></tr><tr><td>S</td><td>1個</td><td>1の係数にiをかける。Hの後に使うと <code>+i</code> を作れる</td></tr><tr><td>S†</td><td>1個</td><td>Sを取り消す。1の係数に−iをかける</td></tr><tr><td>Y</td><td>1個</td><td><code>Y|0⟩=i|1⟩</code>、<code>Y|1⟩=−i|0⟩</code></td></tr><tr><td>CNOT</td><td>制御1個、標的1個</td><td>制御が1の成分だけ、標的にXをかける</td></tr><tr><td>CCX</td><td>制御2個、標的1個</td><td>両方の制御が1の成分だけ、標的にXをかける</td></tr><tr><td>測定</td><td>測る量子ビット</td><td>0か1の古典的な結果を得る</td></tr></table></div>
+<p>Hで作る <code>(0+1)/√2</code> を <code>|+⟩</code>、<code>(0−1)/√2</code> を <code>|−⟩</code> と呼びます。表の0と1は量子状態なので、厳密にはそれぞれ <code>|0⟩</code>、<code>|1⟩</code> です。</p>
+<p>CNOTは「制御を読んでから手で標的を変える操作」ではありません。測定せず、両方の成分に一貫して作用します。たとえば <code>|+⟩|0⟩</code> にCNOTをかけると、<code>(|00⟩+|11⟩)/√2</code> になります。独立したコピーが2個できたのではなく、互いに結びついた重ね合わせができています。</p>
+<h2>4. アンシラに「同じ・違う」を書く</h2>
+<p>最初にa0を0にします。次にCNOTを2回使います。</p>
+<p class='listitem'>1. d0を制御、a0を標的にする。</p>
+<p class='listitem'>2. d1を制御、a0を標的にする。</p>
+<div class='tablewrap'><table><tr><th>d0 d1</th><th>a0の変化</th><th>最後のa0</th></tr><tr><td>00</td><td>0→0→0</td><td>0：同じ</td></tr><tr><td>01</td><td>0→0→1</td><td>1：違う</td></tr><tr><td>10</td><td>0→1→1</td><td>1：違う</td></tr><tr><td>11</td><td>0→1→0</td><td>0：同じ</td></tr></table></div>
+<p>両方が1なら2回反転して0に戻ります。この結果が「パリティ」です。ここでは「2個の数字が同じか違うか」と理解すれば十分です。</p>
+<p>a1にも同じ方法で、d1とd2を比較した結果を入れます。d0、d1、d2自体は標的にしていないので、CNOTでその0/1の並びは書き換えません。</p>
+<p>中央にX誤りが起きた状態では、検査は次のように作用します。</p>
+<p><code>(α|010⟩ + β|101⟩)|00⟩ → (α|010⟩ + β|101⟩)|11⟩</code></p>
+<p>アンシラ側にはどちらの成分でも11が入るので、最後の状態を「データの重ね合わせ × アンシラ11」と分けて書けます。アンシラを読むと必ず11です。データが010か101かという情報は得ません。これが、この条件で測定しても重ね合わせが保たれる理由です。</p>
+<p>一般の状態で何を測っても安全という意味ではありません。今回は、同じ誤りを受けた2つの論理成分が、同じ検査結果を持つように符号を設計しています。</p>
+<h2>5. Level 1：中央のX誤りを、最初から最後まで</h2>
+<p>最初の情報を <code>|ψ⟩=α|0⟩+β|1⟩</code> とします。</p>
+<div class='tablewrap'><table><tr><th>段階</th><th>データの状態</th><th>アンシラ</th></tr><tr><td>準備</td><td><code>α|000⟩+β|100⟩</code></td><td>00</td></tr><tr><td>符号化：d0→d1、d0→d2にCNOT</td><td><code>α|000⟩+β|111⟩</code></td><td>00</td></tr><tr><td>試験係がd1にXを入れる</td><td><code>α|010⟩+β|101⟩</code></td><td>00</td></tr><tr><td>比較結果をアンシラに書く</td><td><code>α|010⟩+β|101⟩</code></td><td>11</td></tr><tr><td>アンシラを測る</td><td>同じ重ね合わせ</td><td>測定結果11</td></tr><tr><td>訂正係がd1にX</td><td><code>α|000⟩+β|111⟩</code></td><td>11</td></tr><tr><td>復号：d0→d2、d0→d1にCNOT</td><td><code>(α|0⟩+β|1⟩)|00⟩</code></td><td>11</td></tr></table></div>
+<p>「符号化」は1個の情報を3個に広げて守ること、「復号」は元の1個に戻すことです。復号した後、元の状態はd0にあります。d1とd2は0に戻り、アンシラは誤りの記録を保持します。</p>
+<p>訂正係が使う表はこれだけです。</p>
+<div class='tablewrap'><table><tr><th>比較結果 (左–中央, 中央–右)</th><th>分かること</th><th>訂正</th></tr><tr><td>00</td><td>誤りなし</td><td>何もしない</td></tr><tr><td>10</td><td>左の誤り</td><td>d0にX</td></tr><tr><td>11</td><td>中央の誤り</td><td>d1にX</td></tr><tr><td>01</td><td>右の誤り</td><td>d2にX</td></tr></table></div>
+<p>試験係だけが入れた誤りを知っています。訂正係の関数には、その場所も、αやβも、入力状態の名前も渡していません。</p>
+<p>実演では <code>α=1/√2</code>、<code>β=i/√2</code> の <code>|+i⟩</code> を使います。復元の途中のiが最後まで正しく残ることも確認できます。</p>
+<pre><code>.venv/bin/python -m minesweeper demo --level 1 --input +i --error X --location 1 --shots 512</code></pre>
+<p>実際の理想シミュレーション結果は <code>{&#x27;000 11&#x27;: 512}</code> でした。最後の <code>11</code> が比較結果です。前の <code>000</code> は、復元後に準備の逆操作をしてデータ3個が0に戻ったことを表します。</p>
+<h2>6. Level 2の前に：Hで「＋と−」を区別する</h2>
+<p>1個の量子ビットだけ考えます。</p>
+<p><code>|+⟩=(|0⟩+|1⟩)/√2</code> と <code>|−⟩=(|0⟩−|1⟩)/√2</code> を、そのまま0/1で測ると、両方とも半々です。この測り方ではマイナスの違いが見えません。</p>
+<p>そこでHをかけます。</p>
+<p><code>H|+⟩ = (H|0⟩+H|1⟩)/√2 = ((|0⟩+|1⟩)+(|0⟩−|1⟩))/2 = |0⟩</code></p>
+<p><code>H|−⟩ = (H|0⟩−H|1⟩)/√2 = ((|0⟩+|1⟩)−(|0⟩−|1⟩))/2 = |1⟩</code></p>
+<p>足し合わせたとき、片方の成分が打ち消されます。これが<strong>干渉</strong>です。Hの後なら、＋は必ず0、−は必ず1になります。</p>
+<p>Zは <code>|+⟩</code> を <code>|−⟩</code> に、<code>|−⟩</code> を <code>|+⟩</code> に変えます。つまり、＋/−を使う世界ではZが入れ替え誤りとして見えます。</p>
+<h2>7. Level 2：Hで見方を変えて、同じ訂正回路へ</h2>
+<p>3個での符号化は、まずLevel 1と同じです。その後、<strong>3個すべて</strong>にHをかけます。</p>
+<p><code>α|000⟩+β|111⟩ → α|+++⟩+β|−−−⟩</code></p>
+<p><strong>この時点でZ誤りを注入します。</strong> 中央なら、<code>+++</code>の成分は<code>+−+</code>になり、<code>−−−</code>の成分は<code>−+−</code>になります。</p>
+<p>次に3個すべてにもう一度Hをかけます。</p>
+<p><code>α|+−+⟩+β|−+−⟩ → α|010⟩+β|101⟩</code></p>
+<p>さっきと同じ状態になりました。あとは比較結果11を得て、<strong>今の0/1の基底でd1にX</strong>をかけ、復号します。元のαとβを持つ1個の状態に戻ります。</p>
+<p>Hで挟むとZがXとして働くことを、<code>HZH=X</code> と書きます。Hを2回かけると元に戻るので、誤りがないケースも正しく戻ります。</p>
+<div class='tablewrap'><table><tr><th>境界</th><th>ここで行う操作</th></tr><tr><td>符号化</td><td>繰り返し符号化→データ全員にH</td></tr><tr><td>誤り注入点</td><td>この＋/−の基底でZを入れる</td></tr><tr><td>訂正の基底</td><td>データ全員にHで戻し、0/1で検査してX訂正</td></tr><tr><td>元の情報を確認する点</td><td>復号後のd0。準備の逆操作より前</td></tr></table></div>
+<pre><code>.venv/bin/python -m minesweeper demo --level 2 --input +i --error Z --location 1 --shots 512</code></pre>
+<h2>8. Level 3：Yは、並びと符号の両方を変える</h2>
+<p>Yは <code>Y|0⟩=i|1⟩</code>、<code>Y|1⟩=−i|0⟩</code> です。中央にYを入れると、</p>
+<p><code>α|000⟩+β|111⟩ → iα|010⟩−iβ|101⟩</code></p>
+<p>並びは010と101なので、比較結果はやはり11です。比較結果は係数のプラス・マイナスを読まず、同じ・違うだけを調べます。</p>
+<p>今回は「入った誤りはYだけ」という約束があります。だから場所が分かったら、その場所にYをかけます。Yを2回かけると元に戻るため、並びだけでなく係数も正しく戻ります。</p>
+<p>ここでXだけかけてしまうと、</p>
+<p><code>iα|010⟩−iβ|101⟩ → i(α|000⟩−β|111⟩)</code></p>
+<p>となります。全体のiは観測に影響しませんが、βについたマイナスは相対的な違いなので、無視できません。復号後も <code>α|0⟩−β|1⟩</code> です。</p>
+<p>入力を＋にすると、Xだけの訂正では−が出ます。0/1で測る割合は両方とも半々ですが、元の状態との忠実度は0です。正しくYで訂正すると忠実度は1です。この比較は実際にテスト・実行済みです。</p>
+<pre><code>.venv/bin/python -m minesweeper demo --level 3 --input + --error Y --location 1 --shots 512</code></pre>
+<h2>9. Level 4：場所ではなく、種類を当てる</h2>
+<p>今度のデータは4個です。守るための2つの状態を選びます。添字Lは「符号化した論理状態」という印です。</p>
+<p><code>|0L⟩=(|0000⟩+|1111⟩)/√2</code></p>
+<p><code>|1L⟩=(|0011⟩+|1100⟩)/√2</code></p>
+<p>入力 <code>α|0⟩+β|1⟩</code> を <code>α|0L⟩+β|1L⟩</code> にします。最初の入力はd0、残りは0です。符号化の操作は順にCNOT(d0→d1)、H(d2)、CNOT(d2→d0)、CNOT(d2→d1)、CNOT(d2→d3)です。</p>
+<p>検査は2種類です。</p>
+<p><strong>ZZZZ検査：</strong> 4個のデータそれぞれからa0へCNOTします。1の個数が偶数なら0、奇数なら1になります。上の4つの並びはすべて偶数なので、正常なら0です。XかYが1個起きると1の個数の偶奇が変わり、1になります。Zは並びを変えないので、この検査だけでは見えません。</p>
+<p><strong>XXXX検査：</strong> a1にHをかけ、a1を制御として4個のデータにCNOTし、最後にa1へHをかけます。この検査では「4個すべてにXをかけたとき、状態が同じか、全体のマイナスになるか」を読みます。正常な符号語は、0000と1111が入れ替わっても同じ、0011と1100が入れ替わっても同じなので0です。ZかYが1個起きると1になります。</p>
+<p>このように正常な符号語をそのまま保つ検査を、ここでは<strong>スタビライザー</strong>と呼びます。結果の0は符号＋1、1は符号−1に対応します。</p>
+<div class='tablewrap'><table><tr><th>誤り</th><th>ZZZZの結果</th><th>XXXXの結果</th><th>アンシラのビット (s0,s1)</th></tr><tr><td>なし</td><td>＋1</td><td>＋1</td><td>00</td></tr><tr><td>X</td><td>−1</td><td>＋1</td><td>10</td></tr><tr><td>Z</td><td>＋1</td><td>−1</td><td>01</td></tr><tr><td>Y</td><td>−1</td><td>−1</td><td>11</td></tr></table></div>
+<p>XはZ検査と相性が悪く、ZはX検査と相性が悪い、と最初は覚えても構いません。正確には、同じ量子ビット上でXZとZXの順序を入れ替えると符号が反転します。この性質を「反交換」といいます。Yは両方の検査と反交換します。</p>
+<p>どの位置に1個入っても、2つの検査で変わる符号は誤りの種類だけで決まります。だから、αやβを知らずに分類できます。同じ種類で場所が違う場合は同じ結果なので、<strong>この2ビットだけでは場所は分かりません。</strong> Level 4で要求されるのはここまでです。</p>
+<p>読み取るのはa0とa1だけで、データ4個は直接測りません。理想シミュレーションでは、検査前の「誤りを受けた符号化状態」と、検査後のデータの状態が一致することも確認しています。誤りを取り除いたという意味ではありません。</p>
+<h2>10. なぜ6種類のテストで量子情報を確かめられる？</h2>
+<p>0と1だけでは、相対位相の失敗を見逃します。そこで＋、−、＋i、−iも使います。状態の0/1成分と、その間の実数・虚数の関係を調べる代表的な6状態です。</p>
+<p>さらに「この6個で成功したから、それ以外も何となく大丈夫」とはしません。各誤りについて、論理0と論理1が<strong>同じ全体位相</strong>で元に戻ることを、数式と追加テストで確認します。量子操作は重ね合わせにも同じように作用するので、αとβが任意でも、その関係が保たれます。</p>
+<p>状態忠実度は「元の状態とどれだけ一致するか」を表し、完全に同じなら1、直交する別の状態なら0です。計算機で状態ベクトルを扱える理想シミュレーションでは、直接計算できます。実機の測定ヒストグラムだけから、同じ意味の完全な状態忠実度が分かるわけではありません。</p>
+<p>Levels 1–3のショット検証では、元の準備をUとすると、訂正・復号後に逆操作U†をかけます。元の状態に戻っていれば必ず0になります。残りのデータ2個も0に戻ったか確認します。アンシラが期待どおりで、データが000に戻ったショットを成功として数えます。失敗ショットを捨てる処理はしていません。</p>
+<h2>11. 審査員から聞かれそうなこと</h2>
+<p><strong>「アンシラを測るのに、なぜ情報が壊れない？」</strong> 同じ誤りを受けた論理0と論理1が同じシンドロームを持ち、測定が両者を区別しないからです。中央Xの例なら、010も101も11を返します。</p>
+<p><strong>「3個あればどんな誤りでも直る？」</strong> 直りません。Levels 1–3は誤りの種類が事前に決まっています。Level 3で種類を知らずに同じシンドロームだけ受け取っても、XとYのどちらで直すべきかは決まりません。</p>
+<p><strong>「Level 4は訂正している？」</strong> 種類の分類だけです。誤りのあるデータの状態を検査中に保ち、誤り自体は残しています。</p>
+<p><strong>「コードが答えを知っているだけでは？」</strong> 誤りを入れる試験係と訂正係を別にしました。訂正係はレベルとシンドロームしか受け取りません。入力ラベルは準備と検証にしか使いません。</p>
+<p><strong>「実機でも100%？」</strong> まだIQM実機では実行していません。100%は理想シミュレーションの結果です。公式模擬バックエンドの例示的なノイズモデルでは別の成功率が出ていますが、それも実機結果ではありません。</p>
+<h2>最初のコマンド・実行済み検証・提出まで</h2>
+<p>ZIPを展開し、<code>quantum-minesweeper</code>フォルダで最初に実行するコマンドは <code>bash scripts/setup.sh</code> です。</p>
+<p>実行済み：pytest 300件がすべて成功。全150ケースを各512ショット、計76,800ショットで検証し、理想状態忠実度は数値誤差の範囲で1、全ケースのショット成功率は100%でした。結果は <code>results/</code> にあります。</p>
+<p>IQM実機で検証した内容：<strong>Not run on IQM hardware.</strong> 実機の認証情報と接続先が利用できませんでした。公式模擬ターゲットへのコンパイルと、その正確な変換後回路の理想シミュレーションは実行済みです。</p>
+<p>提出前に必要なこと：READMEの非表示トークン入力手順で実機に32ショットの試験ジョブを送り、結果・ジョブID・回路を保存します。可能なら1024ショットで再実行し、実機の観測と解釈をレポートに加え、GitHubにアップロードしてデモを練習してください。</p></main></html>

@@ -1,0 +1,40 @@
+{
+  "source": "IQM_QPU",
+  "job_id": "01a1fff5-31e3-744f-89da-cb1d14f7bacb",
+  "level": 4,
+  "input": "+i",
+  "expected_syndrome": [
+    1,
+    1
+  ],
+  "shots": 32,
+  "raw_counts": {
+    "11": 24,
+    "01": 3,
+    "10": 4,
+    "00": 1
+  },
+  "observed_syndrome_counts_human_order": {
+    "11": 24,
+    "10": 3,
+    "01": 4,
+    "00": 1
+  },
+  "syndrome_success_rate": 0.75,
+  "joint_success_rate": 0.75,
+  "joint_success_wilson_95": [
+    0.5789344100575552,
+    0.8674759908149096
+  ],
+  "postselection": "none",
+  "retained_shots": 32,
+  "retained_fraction": 1.0,
+  "classification_success_rate": 0.75,
+  "observed_classification_counts": {
+    "Y": 24,
+    "X": 3,
+    "Z": 4,
+    "I": 1
+  },
+  "hardware_data_fidelity": "not measured"
+}

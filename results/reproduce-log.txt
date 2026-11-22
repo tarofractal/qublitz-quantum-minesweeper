@@ -1,0 +1,155 @@
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 72%]
+........................................................................ [ 96%]
+............                                                             [100%]
+300 passed in 16.34s
+
+{
+  "created_at_utc": "2026-11-21T19:52:12.638001+00:00",
+  "software": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "qiskit": "2.1.2",
+    "qiskit-aer": "0.17.2",
+    "iqm-client": "36.0.0",
+    "numpy": "2.5.5",
+    "pytest": "9.2.0",
+    "matplotlib": "3.11.2"
+  },
+  "seed": 2026,
+  "shots_per_case": 512,
+  "cases": 150,
+  "levels": [
+    {
+      "level": 1,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 2,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 3,
+      "cases": 24,
+      "error_configurations": 4,
+      "minimum_ideal_fidelity": 1.0,
+      "fidelity_meaning": "decoded logical state",
+      "finite_shots": 12288,
+      "minimum_case_success_rate": 1.0
+    },
+    {
+      "level": 4,
+      "cases": 78,
+      "error_configurations": 13,
+      "minimum_ideal_fidelity": 0.9999999999999989,
+      "fidelity_meaning": "data preservation after extraction",
+      "finite_shots": 39936,
+      "minimum_case_success_rate": 1.0
+    }
+  ],
+  "hardware_status": "Not run on IQM hardware.",
+  "postselection": "none"
+}
+Level 1; input |+i>; injected X on 1
+Human ket order: d0 d1 d2 | a0 a1. Raw counts: v2v1v0 s1s0.
+Ancilla 0 compares left/middle; ancilla 1 compares middle/right.
+initial: (+1.000000+0.000000i)|000>|00>
+prepared: (+0.707107+0.000000i)|000>|00> + (+0.000000+0.707107i)|100>|00>
+encoded: (+0.707107+0.000000i)|000>|00> + (+0.000000+0.707107i)|111>|00>
+injected: (+0.707107+0.000000i)|010>|00> + (+0.000000+0.707107i)|101>|00>
+recovery_basis: (+0.707107+0.000000i)|010>|00> + (+0.000000+0.707107i)|101>|00>
+extracted: (+0.707107+0.000000i)|010>|11> + (+0.000000+0.707107i)|101>|11>
+recovered: (+0.707107+0.000000i)|000>|11> + (+0.000000+0.707107i)|111>|11>
+decoded: (+0.707107+0.000000i)|000>|11> + (+0.000000+0.707107i)|100>|11>
+verification: (+1.000000+0.000000i)|000>|11>
+Measured syndrome (left-middle,middle-right): (1, 1)
+Quantum-state fidelity before inverse preparation: 1.000000000000
+Raw finite-shot counts: {'000 11': 512}
+No post-selection. These are simulation results.
+Level 2; input |+i>; injected Z on 1
+Human ket order: d0 d1 d2 | a0 a1. Raw counts: v2v1v0 s1s0.
+Ancilla 0 compares left/middle; ancilla 1 compares middle/right.
+initial: (+1.000000+0.000000i)|000>|00>
+prepared: (+0.707107+0.000000i)|000>|00> + (+0.000000+0.707107i)|100>|00>
+encoded: (+0.250000+0.250000i)|000>|00> + (+0.250000-0.250000i)|100>|00> + (+0.250000-0.250000i)|010>|00> + (+0.250000+0.250000i)|110>|00> + (+0.250000-0.250000i)|001>|00> + (+0.250000+0.250000i)|101>|00> + (+0.250000+0.250000i)|011>|00> + (+0.250000-0.250000i)|111>|00>
+injected: (+0.250000+0.250000i)|000>|00> + (+0.250000-0.250000i)|100>|00> + (-0.250000+0.250000i)|010>|00> + (-0.250000-0.250000i)|110>|00> + (+0.250000-0.250000i)|001>|00> + (+0.250000+0.250000i)|101>|00> + (-0.250000-0.250000i)|011>|00> + (-0.250000+0.250000i)|111>|00>
+recovery_basis: (+0.707107-0.000000i)|010>|00> + (-0.000000+0.707107i)|101>|00>
+extracted: (+0.707107-0.000000i)|010>|11> + (-0.000000+0.707107i)|101>|11>
+recovered: (+0.707107-0.000000i)|000>|11> + (-0.000000+0.707107i)|111>|11>
+decoded: (+0.707107-0.000000i)|000>|11> + (-0.000000+0.707107i)|100>|11>
+verification: (+1.000000-0.000000i)|000>|11>
+Measured syndrome (left-middle,middle-right): (1, 1)
+Quantum-state fidelity before inverse preparation: 1.000000000000
+Raw finite-shot counts: {'000 11': 512}
+No post-selection. These are simulation results.
+Level 3; input |+>; injected Y on 1
+Human ket order: d0 d1 d2 | a0 a1. Raw counts: v2v1v0 s1s0.
+Ancilla 0 compares left/middle; ancilla 1 compares middle/right.
+initial: (+1.000000+0.000000i)|000>|00>
+prepared: (+0.707107+0.000000i)|000>|00> + (+0.707107+0.000000i)|100>|00>
+encoded: (+0.707107+0.000000i)|000>|00> + (+0.707107+0.000000i)|111>|00>
+injected: (+0.000000+0.707107i)|010>|00> + (+0.000000-0.707107i)|101>|00>
+recovery_basis: (+0.000000+0.707107i)|010>|00> + (+0.000000-0.707107i)|101>|00>
+extracted: (+0.000000+0.707107i)|010>|11> + (+0.000000-0.707107i)|101>|11>
+recovered: (+0.707107+0.000000i)|000>|11> + (+0.707107+0.000000i)|111>|11>
+decoded: (+0.707107+0.000000i)|000>|11> + (+0.707107+0.000000i)|100>|11>
+verification: (+1.000000+0.000000i)|000>|11>
+Measured syndrome (left-middle,middle-right): (1, 1)
+Quantum-state fidelity before inverse preparation: 1.000000000000
+Raw finite-shot counts: {'000 11': 512}
+No post-selection. These are simulation results.
+CONTROL: replace Y recovery with X only => fidelity 0.000000000000
+Prepared IQMFakeGarnetBackend; source and native-circuit simulation passed.
+Not run on IQM hardware.
+{
+  "source": "IQM_fake_backend_SIMULATION",
+  "job_id": null,
+  "level": 4,
+  "input": "+i",
+  "expected_syndrome": [
+    1,
+    1
+  ],
+  "shots": 512,
+  "raw_counts": {
+    "10": 44,
+    "00": 37,
+    "01": 58,
+    "11": 373
+  },
+  "observed_syndrome_counts_human_order": {
+    "01": 44,
+    "00": 37,
+    "10": 58,
+    "11": 373
+  },
+  "syndrome_success_rate": 0.728515625,
+  "joint_success_rate": 0.728515625,
+  "joint_success_wilson_95": [
+    0.6883982092798265,
+    0.7652295400968246
+  ],
+  "postselection": "none",
+  "retained_shots": 512,
+  "retained_fraction": 1.0,
+  "classification_success_rate": 0.728515625,
+  "observed_classification_counts": {
+    "Z": 44,
+    "I": 37,
+    "X": 58,
+    "Y": 373
+  },
+  "hardware_data_fidelity": "not measured"
+}
+Built report, Japanese guide, English script (MD/HTML/PDF), five circuit diagrams and offline live demo.

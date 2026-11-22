@@ -1,0 +1,1183 @@
+{
+  "source": "calibration-informed noise SIMULATION, two held-out seeds",
+  "job_id": null,
+  "raw_bit_order": "syn1syn0",
+  "classification_syndrome_order": "ZZZZ,XXXX",
+  "postselection": "none",
+  "retained_fraction": 1.0,
+  "variants": {
+    "original": {
+      "shots": 4096,
+      "successes": 3672,
+      "confusion_counts": {
+        "I": {
+          "I": 922,
+          "X": 31,
+          "Y": 20,
+          "Z": 51
+        },
+        "X": {
+          "I": 51,
+          "X": 915,
+          "Y": 29,
+          "Z": 29
+        },
+        "Y": {
+          "I": 33,
+          "X": 53,
+          "Y": 906,
+          "Z": 32
+        },
+        "Z": {
+          "I": 33,
+          "X": 19,
+          "Y": 43,
+          "Z": 929
+        }
+      },
+      "cases": [
+        {
+          "variant": "original",
+          "case_id": "+i_I_None",
+          "input": "+i",
+          "injected_error": "I",
+          "location": null,
+          "expected_syndrome": [
+            0,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "01": 31,
+            "11": 20,
+            "10": 51,
+            "00": 922
+          },
+          "observed_syndrome_counts_human_order": {
+            "10": 31,
+            "11": 20,
+            "01": 51,
+            "00": 922
+          },
+          "syndrome_success_rate": 0.900390625,
+          "joint_success_rate": 0.900390625,
+          "joint_success_wilson_95": [
+            0.8805247415201278,
+            0.9172636654009518
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.900390625,
+          "observed_classification_counts": {
+            "X": 31,
+            "Y": 20,
+            "Z": 51,
+            "I": 922
+          }
+        },
+        {
+          "variant": "original",
+          "case_id": "+i_X_1",
+          "input": "+i",
+          "injected_error": "X",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "11": 29,
+            "00": 51,
+            "10": 29,
+            "01": 915
+          },
+          "observed_syndrome_counts_human_order": {
+            "11": 29,
+            "00": 51,
+            "01": 29,
+            "10": 915
+          },
+          "syndrome_success_rate": 0.8935546875,
+          "joint_success_rate": 0.8935546875,
+          "joint_success_wilson_95": [
+            0.8731722953596397,
+            0.9109953338822996
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.8935546875,
+          "observed_classification_counts": {
+            "Y": 29,
+            "I": 51,
+            "Z": 29,
+            "X": 915
+          }
+        },
+        {
+          "variant": "original",
+          "case_id": "+i_Z_1",
+          "input": "+i",
+          "injected_error": "Z",
+          "location": 1,
+          "expected_syndrome": [
+            0,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "01": 19,
+            "11": 43,
+            "00": 33,
+            "10": 929
+          },
+          "observed_syndrome_counts_human_order": {
+            "10": 19,
+            "11": 43,
+            "00": 33,
+            "01": 929
+          },
+          "syndrome_success_rate": 0.9072265625,
+          "joint_success_rate": 0.9072265625,
+          "joint_success_wilson_95": [
+            0.8879034487816412,
+            0.9235057358185789
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.9072265625,
+          "observed_classification_counts": {
+            "X": 19,
+            "Y": 43,
+            "I": 33,
+            "Z": 929
+          }
+        },
+        {
+          "variant": "original",
+          "case_id": "+i_Y_1",
+          "input": "+i",
+          "injected_error": "Y",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "00": 33,
+            "10": 32,
+            "01": 53,
+            "11": 906
+          },
+          "observed_syndrome_counts_human_order": {
+            "00": 33,
+            "01": 32,
+            "10": 53,
+            "11": 906
+          },
+          "syndrome_success_rate": 0.884765625,
+          "joint_success_rate": 0.884765625,
+          "joint_success_wilson_95": [
+            0.8637542386470278,
+            0.9029009621503024
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.884765625,
+          "observed_classification_counts": {
+            "I": 33,
+            "Z": 32,
+            "X": 53,
+            "Y": 906
+          }
+        }
+      ],
+      "success_rate": 0.896484375,
+      "wilson_95": [
+        0.8867806948121609,
+        0.9054450613843424
+      ],
+      "confusion_row_fractions": {
+        "I": {
+          "I": 0.900390625,
+          "X": 0.0302734375,
+          "Y": 0.01953125,
+          "Z": 0.0498046875
+        },
+        "X": {
+          "I": 0.0498046875,
+          "X": 0.8935546875,
+          "Y": 0.0283203125,
+          "Z": 0.0283203125
+        },
+        "Y": {
+          "I": 0.0322265625,
+          "X": 0.0517578125,
+          "Y": 0.884765625,
+          "Z": 0.03125
+        },
+        "Z": {
+          "I": 0.0322265625,
+          "X": 0.0185546875,
+          "Y": 0.0419921875,
+          "Z": 0.9072265625
+        }
+      },
+      "macro_type_success": 0.896484375
+    },
+    "placement": {
+      "shots": 4096,
+      "successes": 3686,
+      "confusion_counts": {
+        "I": {
+          "I": 923,
+          "X": 41,
+          "Y": 19,
+          "Z": 41
+        },
+        "X": {
+          "I": 32,
+          "X": 930,
+          "Y": 46,
+          "Z": 16
+        },
+        "Y": {
+          "I": 27,
+          "X": 48,
+          "Y": 910,
+          "Z": 39
+        },
+        "Z": {
+          "I": 53,
+          "X": 16,
+          "Y": 32,
+          "Z": 923
+        }
+      },
+      "cases": [
+        {
+          "variant": "placement",
+          "case_id": "+i_I_None",
+          "input": "+i",
+          "injected_error": "I",
+          "location": null,
+          "expected_syndrome": [
+            0,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "11": 19,
+            "01": 41,
+            "10": 41,
+            "00": 923
+          },
+          "observed_syndrome_counts_human_order": {
+            "11": 19,
+            "10": 41,
+            "01": 41,
+            "00": 923
+          },
+          "syndrome_success_rate": 0.9013671875,
+          "joint_success_rate": 0.9013671875,
+          "joint_success_wilson_95": [
+            0.8815771788633225,
+            0.9181570534404916
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.9013671875,
+          "observed_classification_counts": {
+            "Y": 19,
+            "X": 41,
+            "Z": 41,
+            "I": 923
+          }
+        },
+        {
+          "variant": "placement",
+          "case_id": "+i_X_1",
+          "input": "+i",
+          "injected_error": "X",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "10": 16,
+            "00": 32,
+            "11": 46,
+            "01": 930
+          },
+          "observed_syndrome_counts_human_order": {
+            "01": 16,
+            "00": 32,
+            "11": 46,
+            "10": 930
+          },
+          "syndrome_success_rate": 0.908203125,
+          "joint_success_rate": 0.908203125,
+          "joint_success_wilson_95": [
+            0.8889598394744495,
+            0.9243951705085051
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.908203125,
+          "observed_classification_counts": {
+            "Z": 16,
+            "I": 32,
+            "Y": 46,
+            "X": 930
+          }
+        },
+        {
+          "variant": "placement",
+          "case_id": "+i_Z_1",
+          "input": "+i",
+          "injected_error": "Z",
+          "location": 1,
+          "expected_syndrome": [
+            0,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "01": 16,
+            "11": 32,
+            "00": 53,
+            "10": 923
+          },
+          "observed_syndrome_counts_human_order": {
+            "10": 16,
+            "11": 32,
+            "00": 53,
+            "01": 923
+          },
+          "syndrome_success_rate": 0.9013671875,
+          "joint_success_rate": 0.9013671875,
+          "joint_success_wilson_95": [
+            0.8815771788633225,
+            0.9181570534404916
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.9013671875,
+          "observed_classification_counts": {
+            "X": 16,
+            "Y": 32,
+            "I": 53,
+            "Z": 923
+          }
+        },
+        {
+          "variant": "placement",
+          "case_id": "+i_Y_1",
+          "input": "+i",
+          "injected_error": "Y",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "00": 27,
+            "10": 39,
+            "01": 48,
+            "11": 910
+          },
+          "observed_syndrome_counts_human_order": {
+            "00": 27,
+            "01": 39,
+            "10": 48,
+            "11": 910
+          },
+          "syndrome_success_rate": 0.888671875,
+          "joint_success_rate": 0.888671875,
+          "joint_success_wilson_95": [
+            0.8679353953241541,
+            0.9065031070041135
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.888671875,
+          "observed_classification_counts": {
+            "I": 27,
+            "Z": 39,
+            "X": 48,
+            "Y": 910
+          }
+        }
+      ],
+      "success_rate": 0.89990234375,
+      "wilson_95": [
+        0.8903329959119337,
+        0.908722292665574
+      ],
+      "confusion_row_fractions": {
+        "I": {
+          "I": 0.9013671875,
+          "X": 0.0400390625,
+          "Y": 0.0185546875,
+          "Z": 0.0400390625
+        },
+        "X": {
+          "I": 0.03125,
+          "X": 0.908203125,
+          "Y": 0.044921875,
+          "Z": 0.015625
+        },
+        "Y": {
+          "I": 0.0263671875,
+          "X": 0.046875,
+          "Y": 0.888671875,
+          "Z": 0.0380859375
+        },
+        "Z": {
+          "I": 0.0517578125,
+          "X": 0.015625,
+          "Y": 0.03125,
+          "Z": 0.9013671875
+        }
+      },
+      "macro_type_success": 0.89990234375
+    },
+    "improved": {
+      "shots": 4096,
+      "successes": 3841,
+      "confusion_counts": {
+        "I": {
+          "I": 964,
+          "X": 24,
+          "Y": 4,
+          "Z": 32
+        },
+        "X": {
+          "I": 29,
+          "X": 963,
+          "Y": 24,
+          "Z": 8
+        },
+        "Y": {
+          "I": 8,
+          "X": 27,
+          "Y": 964,
+          "Z": 25
+        },
+        "Z": {
+          "I": 52,
+          "X": 6,
+          "Y": 16,
+          "Z": 950
+        }
+      },
+      "cases": [
+        {
+          "variant": "improved",
+          "case_id": "+i_I_None",
+          "input": "+i",
+          "injected_error": "I",
+          "location": null,
+          "expected_syndrome": [
+            0,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "11": 4,
+            "01": 24,
+            "10": 32,
+            "00": 964
+          },
+          "observed_syndrome_counts_human_order": {
+            "11": 4,
+            "10": 24,
+            "01": 32,
+            "00": 964
+          },
+          "syndrome_success_rate": 0.94140625,
+          "joint_success_rate": 0.94140625,
+          "joint_success_wilson_95": [
+            0.9253038995713028,
+            0.9542091734246192
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.94140625,
+          "observed_classification_counts": {
+            "Y": 4,
+            "X": 24,
+            "Z": 32,
+            "I": 964
+          }
+        },
+        {
+          "variant": "improved",
+          "case_id": "+i_X_1",
+          "input": "+i",
+          "injected_error": "X",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            0
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "11": 24,
+            "10": 8,
+            "00": 29,
+            "01": 963
+          },
+          "observed_syndrome_counts_human_order": {
+            "11": 24,
+            "01": 8,
+            "00": 29,
+            "10": 963
+          },
+          "syndrome_success_rate": 0.9404296875,
+          "joint_success_rate": 0.9404296875,
+          "joint_success_wilson_95": [
+            0.9242204779378205,
+            0.9533467696753672
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.9404296875,
+          "observed_classification_counts": {
+            "Y": 24,
+            "Z": 8,
+            "I": 29,
+            "X": 963
+          }
+        },
+        {
+          "variant": "improved",
+          "case_id": "+i_Z_1",
+          "input": "+i",
+          "injected_error": "Z",
+          "location": 1,
+          "expected_syndrome": [
+            0,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "01": 6,
+            "11": 16,
+            "00": 52,
+            "10": 950
+          },
+          "observed_syndrome_counts_human_order": {
+            "10": 6,
+            "11": 16,
+            "00": 52,
+            "01": 950
+          },
+          "syndrome_success_rate": 0.927734375,
+          "joint_success_rate": 0.927734375,
+          "joint_success_wilson_95": [
+            0.9102259036787674,
+            0.9420456139588738
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.927734375,
+          "observed_classification_counts": {
+            "X": 6,
+            "Y": 16,
+            "I": 52,
+            "Z": 950
+          }
+        },
+        {
+          "variant": "improved",
+          "case_id": "+i_Y_1",
+          "input": "+i",
+          "injected_error": "Y",
+          "location": 1,
+          "expected_syndrome": [
+            1,
+            1
+          ],
+          "shots": 1024,
+          "raw_counts": {
+            "00": 8,
+            "10": 25,
+            "01": 27,
+            "11": 964
+          },
+          "observed_syndrome_counts_human_order": {
+            "00": 8,
+            "01": 25,
+            "10": 27,
+            "11": 964
+          },
+          "syndrome_success_rate": 0.94140625,
+          "joint_success_rate": 0.94140625,
+          "joint_success_wilson_95": [
+            0.9253038995713028,
+            0.9542091734246192
+          ],
+          "postselection": "none",
+          "retained_shots": 1024,
+          "retained_fraction": 1.0,
+          "classification_success_rate": 0.94140625,
+          "observed_classification_counts": {
+            "I": 8,
+            "Z": 25,
+            "X": 27,
+            "Y": 964
+          }
+        }
+      ],
+      "success_rate": 0.937744140625,
+      "wilson_95": [
+        0.9299266208648727,
+        0.9447413476451831
+      ],
+      "confusion_row_fractions": {
+        "I": {
+          "I": 0.94140625,
+          "X": 0.0234375,
+          "Y": 0.00390625,
+          "Z": 0.03125
+        },
+        "X": {
+          "I": 0.0283203125,
+          "X": 0.9404296875,
+          "Y": 0.0234375,
+          "Z": 0.0078125
+        },
+        "Y": {
+          "I": 0.0078125,
+          "X": 0.0263671875,
+          "Y": 0.94140625,
+          "Z": 0.0244140625
+        },
+        "Z": {
+          "I": 0.05078125,
+          "X": 0.005859375,
+          "Y": 0.015625,
+          "Z": 0.927734375
+        }
+      },
+      "macro_type_success": 0.937744140625
+    }
+  },
+  "changes_against_original": {
+    "placement": {
+      "change_percentage_points": 0.341796875,
+      "newcombe_wilson_95_percentage_points": [
+        -0.9691810749459325,
+        1.653105031236344
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    },
+    "improved": {
+      "change_percentage_points": 4.1259765625,
+      "newcombe_wilson_95_percentage_points": [
+        2.936827641302484,
+        5.3223139533357156
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    }
+  },
+  "logical_state_fidelity": "not measured by syndrome counts",
+  "per_case": [
+    {
+      "variant": "original",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "injected_error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "01": 31,
+        "11": 20,
+        "10": 51,
+        "00": 922
+      },
+      "observed_syndrome_counts_human_order": {
+        "10": 31,
+        "11": 20,
+        "01": 51,
+        "00": 922
+      },
+      "syndrome_success_rate": 0.900390625,
+      "joint_success_rate": 0.900390625,
+      "joint_success_wilson_95": [
+        0.8805247415201278,
+        0.9172636654009518
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.900390625,
+      "observed_classification_counts": {
+        "X": 31,
+        "Y": 20,
+        "Z": 51,
+        "I": 922
+      }
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "injected_error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "11": 29,
+        "00": 51,
+        "10": 29,
+        "01": 915
+      },
+      "observed_syndrome_counts_human_order": {
+        "11": 29,
+        "00": 51,
+        "01": 29,
+        "10": 915
+      },
+      "syndrome_success_rate": 0.8935546875,
+      "joint_success_rate": 0.8935546875,
+      "joint_success_wilson_95": [
+        0.8731722953596397,
+        0.9109953338822996
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.8935546875,
+      "observed_classification_counts": {
+        "Y": 29,
+        "I": 51,
+        "Z": 29,
+        "X": 915
+      }
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "injected_error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "01": 19,
+        "11": 43,
+        "00": 33,
+        "10": 929
+      },
+      "observed_syndrome_counts_human_order": {
+        "10": 19,
+        "11": 43,
+        "00": 33,
+        "01": 929
+      },
+      "syndrome_success_rate": 0.9072265625,
+      "joint_success_rate": 0.9072265625,
+      "joint_success_wilson_95": [
+        0.8879034487816412,
+        0.9235057358185789
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.9072265625,
+      "observed_classification_counts": {
+        "X": 19,
+        "Y": 43,
+        "I": 33,
+        "Z": 929
+      }
+    },
+    {
+      "variant": "original",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "injected_error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "00": 33,
+        "10": 32,
+        "01": 53,
+        "11": 906
+      },
+      "observed_syndrome_counts_human_order": {
+        "00": 33,
+        "01": 32,
+        "10": 53,
+        "11": 906
+      },
+      "syndrome_success_rate": 0.884765625,
+      "joint_success_rate": 0.884765625,
+      "joint_success_wilson_95": [
+        0.8637542386470278,
+        0.9029009621503024
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.884765625,
+      "observed_classification_counts": {
+        "I": 33,
+        "Z": 32,
+        "X": 53,
+        "Y": 906
+      }
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "injected_error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "11": 19,
+        "01": 41,
+        "10": 41,
+        "00": 923
+      },
+      "observed_syndrome_counts_human_order": {
+        "11": 19,
+        "10": 41,
+        "01": 41,
+        "00": 923
+      },
+      "syndrome_success_rate": 0.9013671875,
+      "joint_success_rate": 0.9013671875,
+      "joint_success_wilson_95": [
+        0.8815771788633225,
+        0.9181570534404916
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.9013671875,
+      "observed_classification_counts": {
+        "Y": 19,
+        "X": 41,
+        "Z": 41,
+        "I": 923
+      }
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "injected_error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "10": 16,
+        "00": 32,
+        "11": 46,
+        "01": 930
+      },
+      "observed_syndrome_counts_human_order": {
+        "01": 16,
+        "00": 32,
+        "11": 46,
+        "10": 930
+      },
+      "syndrome_success_rate": 0.908203125,
+      "joint_success_rate": 0.908203125,
+      "joint_success_wilson_95": [
+        0.8889598394744495,
+        0.9243951705085051
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.908203125,
+      "observed_classification_counts": {
+        "Z": 16,
+        "I": 32,
+        "Y": 46,
+        "X": 930
+      }
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "injected_error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "01": 16,
+        "11": 32,
+        "00": 53,
+        "10": 923
+      },
+      "observed_syndrome_counts_human_order": {
+        "10": 16,
+        "11": 32,
+        "00": 53,
+        "01": 923
+      },
+      "syndrome_success_rate": 0.9013671875,
+      "joint_success_rate": 0.9013671875,
+      "joint_success_wilson_95": [
+        0.8815771788633225,
+        0.9181570534404916
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.9013671875,
+      "observed_classification_counts": {
+        "X": 16,
+        "Y": 32,
+        "I": 53,
+        "Z": 923
+      }
+    },
+    {
+      "variant": "placement",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "injected_error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "00": 27,
+        "10": 39,
+        "01": 48,
+        "11": 910
+      },
+      "observed_syndrome_counts_human_order": {
+        "00": 27,
+        "01": 39,
+        "10": 48,
+        "11": 910
+      },
+      "syndrome_success_rate": 0.888671875,
+      "joint_success_rate": 0.888671875,
+      "joint_success_wilson_95": [
+        0.8679353953241541,
+        0.9065031070041135
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.888671875,
+      "observed_classification_counts": {
+        "I": 27,
+        "Z": 39,
+        "X": 48,
+        "Y": 910
+      }
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_I_None",
+      "input": "+i",
+      "injected_error": "I",
+      "location": null,
+      "expected_syndrome": [
+        0,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "11": 4,
+        "01": 24,
+        "10": 32,
+        "00": 964
+      },
+      "observed_syndrome_counts_human_order": {
+        "11": 4,
+        "10": 24,
+        "01": 32,
+        "00": 964
+      },
+      "syndrome_success_rate": 0.94140625,
+      "joint_success_rate": 0.94140625,
+      "joint_success_wilson_95": [
+        0.9253038995713028,
+        0.9542091734246192
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.94140625,
+      "observed_classification_counts": {
+        "Y": 4,
+        "X": 24,
+        "Z": 32,
+        "I": 964
+      }
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_X_1",
+      "input": "+i",
+      "injected_error": "X",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        0
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "11": 24,
+        "10": 8,
+        "00": 29,
+        "01": 963
+      },
+      "observed_syndrome_counts_human_order": {
+        "11": 24,
+        "01": 8,
+        "00": 29,
+        "10": 963
+      },
+      "syndrome_success_rate": 0.9404296875,
+      "joint_success_rate": 0.9404296875,
+      "joint_success_wilson_95": [
+        0.9242204779378205,
+        0.9533467696753672
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.9404296875,
+      "observed_classification_counts": {
+        "Y": 24,
+        "Z": 8,
+        "I": 29,
+        "X": 963
+      }
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_Z_1",
+      "input": "+i",
+      "injected_error": "Z",
+      "location": 1,
+      "expected_syndrome": [
+        0,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "01": 6,
+        "11": 16,
+        "00": 52,
+        "10": 950
+      },
+      "observed_syndrome_counts_human_order": {
+        "10": 6,
+        "11": 16,
+        "00": 52,
+        "01": 950
+      },
+      "syndrome_success_rate": 0.927734375,
+      "joint_success_rate": 0.927734375,
+      "joint_success_wilson_95": [
+        0.9102259036787674,
+        0.9420456139588738
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.927734375,
+      "observed_classification_counts": {
+        "X": 6,
+        "Y": 16,
+        "I": 52,
+        "Z": 950
+      }
+    },
+    {
+      "variant": "improved",
+      "case_id": "+i_Y_1",
+      "input": "+i",
+      "injected_error": "Y",
+      "location": 1,
+      "expected_syndrome": [
+        1,
+        1
+      ],
+      "shots": 1024,
+      "raw_counts": {
+        "00": 8,
+        "10": 25,
+        "01": 27,
+        "11": 964
+      },
+      "observed_syndrome_counts_human_order": {
+        "00": 8,
+        "01": 25,
+        "10": 27,
+        "11": 964
+      },
+      "syndrome_success_rate": 0.94140625,
+      "joint_success_rate": 0.94140625,
+      "joint_success_wilson_95": [
+        0.9253038995713028,
+        0.9542091734246192
+      ],
+      "postselection": "none",
+      "retained_shots": 1024,
+      "retained_fraction": 1.0,
+      "classification_success_rate": 0.94140625,
+      "observed_classification_counts": {
+        "I": 8,
+        "Z": 25,
+        "X": 27,
+        "Y": 964
+      }
+    }
+  ]
+}

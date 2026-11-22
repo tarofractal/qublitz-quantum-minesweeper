@@ -1,0 +1,15 @@
+qiskit==2.1.2
+qiskit-aer==0.17.2
+numpy==2.5.5
+
+[dev]
+pytest==9.2.0
+
+[docs]
+matplotlib==3.11.2
+pylatexenc==2.11
+reportlab==5.1.0
+pypdf==7.1.1
+
+[hardware]
+iqm-client[qiskit]==36.0.0

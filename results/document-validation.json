@@ -1,0 +1,20 @@
+{
+  "source": "PyMuPDF layout inspection and rendered-page review",
+  "documents": [
+    {
+      "document": "RESULTS",
+      "pages": 12,
+      "outside_page_text_blocks": 0
+    },
+    {
+      "document": "BEGINNER_JA",
+      "pages": 7,
+      "outside_page_text_blocks": 0
+    },
+    {
+      "document": "PRESENTATION_EN",
+      "pages": 3,
+      "outside_page_text_blocks": 0
+    }
+  ]
+}
