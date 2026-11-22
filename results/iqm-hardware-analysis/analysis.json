@@ -9,21 +9,21 @@
       "bytes": 945
     },
     "protocol": {
-      "filename": "manifest.json",
-      "sha256": "79655f0ce4267faafa736ea11401b95b3ed95195a7c103a77f283bd8d5b54e71",
-      "bytes": 104069
+      "filename": "job.json",
+      "sha256": "be11da617e94d96be5e647aa0bace0bd5d1839b0b67caf739b8878078c17e55e",
+      "bytes": 165034
     },
-    "job_id_basis": "user-supplied export filename/argument",
-    "configuration_basis": "array indices associated with prepared Run Ready protocol; submitted order not independently verified",
-    "matching_job_receipt_supplied": false,
+    "job_id_basis": "matching completed execution receipt and recorded execution command",
+    "configuration_basis": "experiment metadata from matching job receipt",
+    "matching_job_receipt_supplied": true,
     "original_export_bit_order": "measurement-keys",
     "bit_order_basis": "explicit character convention; independently checked with asymmetric X and Z controls",
     "conversion": "measurement_keys indexed by syn clbit, then displayed syn1syn0",
     "live_backend_identity_verified": false,
-    "live_layout_verified": false,
-    "calibration_linkage_verified": false,
+    "live_layout_verified": true,
+    "calibration_linkage_verified": true,
     "run_timestamps_available_in_export": false,
-    "native_artifact_scope": "prepared offline circuits; correspondence to actual submitted native circuits needs original receipt",
+    "native_artifact_scope": "execution QPY exactly matches the client-saved native definition and receipt",
     "logical_state_fidelity": "not measured; only the two syndrome ancillas were read",
     "asymmetric_control_checks": [
       {
@@ -87,7 +87,12 @@
         "expected_is_unique_mode": true
       }
     ],
-    "asymmetric_controls_support_declared_order": true
+    "asymmetric_controls_support_declared_order": true,
+    "recorded_backend_identity_verified": true,
+    "receipt_counts_match_dashboard_export": true,
+    "export_order_verified_against_sdk_receipt": true,
+    "verification_scope": "local audit of supplied runtime records; no fresh server query",
+    "audit_file": "receipt-audit.json"
   },
   "classification_syndrome_order": "ZZZZ,XXXX",
   "postselection": "none",

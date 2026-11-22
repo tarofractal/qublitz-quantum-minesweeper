@@ -1,0 +1,9 @@
+{
+  "source": "actual local pre-edit pytest execution",
+  "command": "python -m pytest -q",
+  "tests": 744,
+  "passed": 744,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 26.19
+}

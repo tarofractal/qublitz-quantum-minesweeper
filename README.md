@@ -4,20 +4,20 @@ Levels 1-4, exhaustive quantum-state verification, an 11-CZ Level-4 classifier, 
 
 **Current hardware evidence:** the supplied 8-circuit / 2048-shot export, assigned using the saved Run Ready protocol, gives **759/1024 = 74.12% original** and **921/1024 = 89.94% improved**, a **+15.82 percentage-point** change (approximate 95% interval +12.55 to +19.07 points). All shots are retained. This is **syndrome-classification success**, not logical-state fidelity.
 
-**Execution evidence:** the supplied terminal transcript records the comparison command on IQM **Garnet**, `--suite balanced --shots 256`, the returned job ID `01a20070-6eb5-7033-942a-a41474a1922e`, and the SDK analysis reporting the same **+15.8203125 percentage-point** change. See [the sanitized execution log](docs/iqm-execution-log.txt) and [its machine-readable evidence](data/iqm-comparison-01a20070/execution-evidence.json). The original 32-shot pilot's retrieved analysis JSON is also preserved in `data/pilot-sdk-analysis-from-transcript.json`.
+**Execution evidence:** the original completed [job receipt](results/iqm-comparison/job.json), [client-saved native definition](results/iqm-comparison/iqm-job-definition.json), and execution QPY are now included. They identify IQM **Garnet**, eight balanced circuits, 256 shots each, and job `01a20070-6eb5-7033-942a-a41474a1922e`. The complete original [execution archive](data/iqm-comparison-01a20070/execution-artifacts.zip) is preserved. The [local receipt audit](results/iqm-hardware-analysis/receipt-audit.json) checks every native instruction, layout, calibration ID and dashboard/SDK count. The [terminal excerpt](docs/iqm-execution-log.txt) remains supporting evidence; the original 32-shot pilot analysis is in `data/pilot-sdk-analysis-from-transcript.json`.
 
-**Provenance:** this is now supported by the recorded execution command and matching job ID, in addition to the prepared eight-circuit protocol and asymmetric X/Z controls. The dashboard export itself has no experiment labels. The full submitted native-circuit payload, live layout and run-time calibration linkage are still unavailable; they must not be inferred from the offline compilation. No additional physical job was submitted while preparing this repository.
+**Provenance:** the completed receipt supplies the actual experiment order and labels. Re-serializing all eight execution QPY circuits with the pinned IQM SDK exactly reproduces every instruction in the client-saved native definition, including physical loci, angles and measurement keys. Dashboard counts converted from measurement-key order exactly equal the SDK receipt counts in every circuit; X/Z controls also agree. The snapshot, recorded live target, native definition and SDK-reported result share calibration ID `ea681de1-9661-41e5-bd6f-cb524fa056a6`. These are local checks of user-supplied runtime records; no fresh server query or new hardware job was performed. The independently server-returned `iqm-result.json` was not supplied, and hardware logical-state fidelity was not measured.
 
 | Evidence source | Original | Improved |
 |---|---:|---:|
-| Supplied hardware export, protocol-reconstructed assignment | 759/1024 = 74.12% | 921/1024 = 89.94% |
+| Supplied hardware export matched to completed execution receipt | 759/1024 = 74.12% | 921/1024 = 89.94% |
 | 95% Wilson interval for those counts | 71.35-76.71% | 87.95-91.64% |
-| Verified offline native compilation, +i/Y1 example | 24 CZ, 52 R, depth 45 | 11 CZ, 33 R, depth 17 |
+| Verified execution artifacts, +i/Y1 example | 24 CZ, 52 R, depth 45 | 11 CZ, 33 R, depth 17 |
 | Ideal exact-native Level-4 cases | 78/78 pass | 78/78 pass |
 | Archived calibration-noise simulation, balanced four types | 89.65% | 93.77% |
 | Earlier archived 32-shot physical pilot, likely +i/Y1 | 24/32 = 75% | Not included in that job |
 
-The 11-CZ circuit is a verified improvement over the reconstructed local baseline, not a claim of global optimality. Offline topology matches the supplied calibration; live identity/layout linkage cannot be established from a count export. Hardware causes are not isolated by the combined rewrite/placement experiment.
+The receipt binds the original/improved classification comparison to the supplied hardware counts. In the recorded execution, syndrome sites `(s0,s1)` are `(QB2,QB4)` for original and `(QB1,QB10)` for improved. Initial improved source wires `(d0,d1,d2,d3,a0,a1)` occupy `(QB5,QB2,QB9,QB4,QB1,QB10)`. The prior offline packet remains in `results/comparison-prepared/`; its binary fingerprint differs from the execution packet, so current hardware analysis uses `results/iqm-comparison/` directly. No claim of globally optimal compilation or an isolated causal explanation of the gain is made.
 
 ## Start here
 
@@ -28,7 +28,7 @@ bash scripts/setup.sh
 bash scripts/reproduce_submission.sh
 ```
 
-The second command checks dependencies, runs the full test suite, regenerates 150 input/error cases at 512 ideal shots each, imports the physical counts, replays all eight exact saved native circuits, and builds current reports and the live demo. **It does not submit a hardware job.** The included test evidence gives the actual test count and outcomes in `results/test-outcome.json` and `results/pytest.txt`.
+The second command checks dependencies, runs the full test suite, regenerates 150 input/error cases at 512 ideal shots each, imports the physical counts, replays all eight exact saved native circuits, and rebuilds teaching materials. For analysis only, run `.venv/bin/python scripts/analyze_hardware.py`; this audits the receipt and replays the exact execution packet without generating a new PDF report. **It does not submit a hardware job.** The included test evidence gives the actual test count and outcomes in `results/test-outcome.json` and `results/pytest.txt`.
 
 Current materials:
 
@@ -41,17 +41,19 @@ Current materials:
 - `docs/live-demo.html`: offline interactive Japanese state walkthrough, with a separately labeled hardware-results section.
 - `results/iqm-hardware-analysis/`: unchanged/normalized counts, per-case CSV, analysis, confusion matrices and exact native replay.
 - `data/iqm-comparison-01a20070/export.json`: byte-for-byte supplied new hardware export.
-- `results/comparison-prepared/`: unchanged Run Ready protocol, QPY/QASM native circuits, layouts and ideal checks.
+- `results/iqm-comparison/`: byte-preserved original execution receipt, native definition, QPY/QASM circuits, layouts and original analysis.
+- `results/iqm-hardware-analysis/receipt-audit.json`: reproducible receipt/native/count/calibration checks.
+- `results/comparison-prepared/`: separate prior offline protocol and circuits, retained as historical evidence.
 - `docs/source/challenge.pdf`: authoritative eight-page challenge PDF, identical to the latest supplied attachment.
 
-The earlier `docs/RESULTS.*`, `BEGINNER_JA.*`, `PRESENTATION_EN.*`, `IMPROVEMENT_REPORT.*` and `IMPROVEMENT_JA.*` are **dated prior-stage records**. Their old hardware status describes those stages. `SUBMISSION_REPORT.*` contains the current count analysis and verification; it predates the newly supplied terminal transcript. For the additional command/job-ID evidence, use this README and `docs/iqm-execution-log.txt`. The old README is retained in `docs/README_before_physical_comparison.md`; the original development README is `docs/README_v1.md`.
+The earlier `docs/RESULTS.*`, `BEGINNER_JA.*`, `PRESENTATION_EN.*`, `IMPROVEMENT_REPORT.*` and `IMPROVEMENT_JA.*` are **dated prior-stage records**. Their old hardware status describes those stages. `SUBMISSION_REPORT.*` predates the terminal transcript and newly supplied execution archive. Its missing-receipt qualifications describe that earlier stage. For current receipt verification, use this README and `results/iqm-hardware-analysis/receipt-audit.json`. No new PDF report was generated for this update. The old README is retained in `docs/README_before_physical_comparison.md`; the original development README is `docs/README_v1.md`.
 
 ## Import the supplied hardware result explicitly
 
 ```bash
 .venv/bin/python -m minesweeper compare --mode import-export \
   --export-file data/iqm-comparison-01a20070/export.json \
-  --protocol-file results/comparison-prepared/manifest.json \
+  --protocol-file results/iqm-comparison/job.json \
   --export-bit-order measurement-keys \
   --job-id 01a20070-6eb5-7033-942a-a41474a1922e \
   --out results/iqm-hardware-analysis
@@ -70,7 +72,7 @@ The classifier receives only the two measured bits. Input/error/location labels 
 
 ## Retrieve the completed comparison without resubmitting
 
-If the original execution folder contains `results/iqm-comparison/job.json`, preserve it and use:
+The original execution folder is now preserved in `results/iqm-comparison/`. Local analysis needs no IQM credentials. To optionally retrieve additional server-returned evidence for this same job, preserve these originals and use:
 
 ```bash
 .venv/bin/python -m minesweeper compare --mode retrieve \
@@ -129,7 +131,7 @@ Configure the authorized server/QPU first. The runner loads the live backend, va
 
 All six logical inputs and every permitted error are covered: 24 cases per recovery level and 78 Level-4 cases. Exact state comparisons and finite-shot inverse-preparation checks are distinct metrics. Levels 1-3 also restore both logical basis states with the same phase, giving arbitrary-amplitude recovery by linearity. The Level-4 extraction isometry agrees on all 16 data columns; the final data equals its post-error encoded state in ideal simulation.
 
-The original 300-test baseline and original 150-case output are archived in `results/improvement/baseline/`. The pre-import improved suite and Run Ready suite each passed 718 tests. Current regression adds real-export analysis, strict bit-order/shot validation, QPY reload layout checks, authentication precedence, and retrieval-without-resubmission tests. The reproducible seeded calibration-noise study remains available:
+The original 300-test baseline and original 150-case output are archived in `results/improvement/baseline/`. The pre-import improved suite and Run Ready suite each passed 718 tests. The pre-receipt baseline passed 744 tests; the current suite passed **803 tests**, zero failures/errors/skips. Current regression adds real-export analysis, strict bit-order/shot validation, QPY reload layout checks, authentication precedence, retrieval-without-resubmission tests, receipt/definition/calibration binding, and six-input isometry probes on each of the eight execution circuits. QPY initial-layout reading uses the unfiltered input-index mapping before slicing; it avoids Qiskit 2.1.2 dictionary-order failures without changing any archived circuit gates. These additional input probes are ideal simulations, not additional hardware cases. The reproducible seeded calibration-noise study remains available:
 
 ```bash
 bash scripts/reproduce_improvement.sh
@@ -139,4 +141,4 @@ That is the **earlier offline study**, with model limitations documented in `doc
 
 ## Submission status
 
-The supplied hardware export supports Level-4 classification under the saved protocol assignment. Hardware logical-state fidelity and Level-1-3 recovery were not measured. Before submitting: recover/audit the original hardware receipt and native circuit to verify configuration/backend/calibration linkage, publish this repository with the raw evidence, and rehearse the live demonstration. Perfect hardware accuracy is not required by the challenge PDF.
+The supplied hardware counts now match the completed original receipt and client-saved native definition. Experiment assignment, physical measurement sites and recorded calibration linkage pass the local audit. Hardware logical-state fidelity and Level-1-3 recovery were not measured. Before submitting, give judges access to this currently private repository (or review its contents and make it public) and rehearse the live demonstration. A fresh server retrieval can add independently returned native/timeline evidence, but another hardware submission is unnecessary for this audit. Perfect hardware accuracy is not required by the challenge PDF.

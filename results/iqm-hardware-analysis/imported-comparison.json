@@ -1,11 +1,11 @@
 {
   "format_version": 1,
-  "created_at_utc": "2026-11-21T22:29:11.147509+00:00",
+  "created_at_utc": "2026-11-21T23:28:16.045766+00:00",
   "source": "user-supplied IQM hardware dashboard export",
   "status": "imported hardware counts",
   "software": {
-    "python": "3.12.14",
-    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.10",
+    "platform": "macOS-26.3-arm64-arm-64bit",
     "qiskit": "2.1.2",
     "qiskit-aer": "0.17.2",
     "iqm-client": "36.0.0",
@@ -28,7 +28,7 @@
     "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
     "metric_set_id": "5e34cba3-680c-4861-adc0-87cf63c9c837",
     "timestamp_utc": "2026-11-21T02:43:01.804237+00:00",
-    "age_hours_at_analysis": 19.76926400027778,
+    "age_hours_at_analysis": 20.753967203888887,
     "qubits": 20,
     "cz_edges": 30,
     "cz_fidelity_range": [
@@ -42,15 +42,15 @@
   },
   "compatibility": {
     "device_label_from_snapshot": "M194_F0W2114_P08_B15",
-    "backend_name": "IQMFakeGarnetBackend",
-    "backend_calibration_set_id": "00000000-0000-0000-0000-000000000000",
+    "backend_name": "garnet",
+    "backend_calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
     "snapshot_calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
-    "calibration_id_matches": false,
+    "calibration_id_matches": true,
     "missing_qubit_names": [],
     "uncalibrated_target_edges": [],
     "unavailable_calibrated_edges": [],
     "topology_matches_snapshot": true,
-    "physical_device_identity_confirmed": false
+    "physical_device_identity_confirmed": true
   },
   "plans": {
     "original": {
@@ -94,45 +94,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/000-original-000.qpy",
-      "signature": "b5c50d0335a0bb4bcfcd7834c3ce6b6d8d34c7c10e4516ace2fa66d37c21a8fe",
+      "signature": "53bea7d104b02e7eedde235aa0c80ad9e8d50d414af850079425affac8e3a2bb",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -147,20 +157,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -171,24 +173,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -207,20 +217,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -282,7 +284,7 @@
         },
         "compiled_depth": 44,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -307,9 +309,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -374,31 +376,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -406,15 +627,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -422,12 +639,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -438,12 +655,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -454,35 +671,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -494,8 +715,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -504,18 +729,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -524,37 +755,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -566,15 +794,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -636,45 +931,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/001-improved-000.qpy",
-      "signature": "3eb3f86b116bafe85c93e27a57437728b6cc7832582e2de7927354340eb08729",
+      "signature": "15c2c75be891ac0808451d20d368ef32f32c72c8712f04f794de7b5fbd0fe957",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -689,20 +994,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -713,24 +1010,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -749,20 +1054,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -824,7 +1121,7 @@
         },
         "compiled_depth": 16,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -849,9 +1146,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -916,31 +1213,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -948,15 +1464,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -964,12 +1476,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -980,12 +1492,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -996,35 +1508,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -1036,8 +1552,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -1046,18 +1566,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -1066,37 +1592,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -1108,15 +1631,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -1178,45 +1768,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/002-improved-001.qpy",
-      "signature": "9f96d542af98ab4d148a34caba3a40d2d0a315e73a02db39501540f1bf78c963",
+      "signature": "d2f346da5abaee224d2922f297b11b94b7c25c8a4084a9dbc418de357fba954b",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -1231,20 +1831,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -1255,24 +1847,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -1291,20 +1891,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -1366,7 +1958,7 @@
         },
         "compiled_depth": 17,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -1391,9 +1983,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -1458,31 +2050,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -1490,15 +2301,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -1506,12 +2313,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -1522,12 +2329,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -1538,35 +2345,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -1578,8 +2389,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -1588,18 +2403,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -1608,37 +2429,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -1650,15 +2468,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -1713,45 +2598,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/003-original-001.qpy",
-      "signature": "930e745a4f1a65998f822e4f9f6319585c0971584a452c5610cb0b95f0deae37",
+      "signature": "52f00c2a302acc7f22adb7df181343bc0ba370caff756567fee249706a342220",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -1766,20 +2661,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -1790,24 +2677,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -1826,20 +2721,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -1901,7 +2788,7 @@
         },
         "compiled_depth": 45,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -1926,9 +2813,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -1993,31 +2880,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -2025,15 +3131,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -2041,12 +3143,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -2057,12 +3159,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -2073,35 +3175,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -2113,8 +3219,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -2123,18 +3233,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -2143,37 +3259,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -2185,15 +3298,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -2248,45 +3428,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/004-original-002.qpy",
-      "signature": "1e17df367dcca50e41eda17eba19180c683310630a2f0306a1a24676741841b5",
+      "signature": "898372705ff8136b5b61b17a590ae0385831859b00669f36017f94405f1a3cf5",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -2301,20 +3491,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -2325,24 +3507,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -2361,20 +3551,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -2436,7 +3618,7 @@
         },
         "compiled_depth": 45,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -2461,9 +3643,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -2528,31 +3710,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -2560,15 +3961,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -2576,12 +3973,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -2592,12 +3989,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -2608,35 +4005,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -2648,8 +4049,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -2658,18 +4063,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -2678,37 +4089,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -2720,15 +4128,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -2790,45 +4265,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/005-improved-002.qpy",
-      "signature": "622853638ecf41e55c94aa5a6d3c63891e555c7a259b7211de460e5811095d39",
+      "signature": "66973bf87b024fbcd25c75ed368eafad9e740bf00304132ae76902a55259f98a",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -2843,20 +4328,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -2867,24 +4344,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -2903,20 +4388,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -2978,7 +4455,7 @@
         },
         "compiled_depth": 17,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -3003,9 +4480,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -3070,31 +4547,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -3102,15 +4798,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -3118,12 +4810,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -3134,12 +4826,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -3150,35 +4842,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -3190,8 +4886,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -3200,18 +4900,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -3220,37 +4926,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -3262,15 +4965,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -3332,45 +5102,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/006-improved-003.qpy",
-      "signature": "09d74ee56595b810370f352ae61533e06b8dd709bc14bf94f3310ed4900eb288",
+      "signature": "e5d48a906305fe77bd2b00db878821e95b29ad60559decd6a9e7277104369f5e",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -3385,20 +5165,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -3409,24 +5181,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -3445,20 +5225,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -3520,7 +5292,7 @@
         },
         "compiled_depth": 16,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -3545,9 +5317,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -3612,31 +5384,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -3644,15 +5635,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -3660,12 +5647,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -3676,12 +5663,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -3692,35 +5679,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -3732,8 +5723,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -3742,18 +5737,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -3762,37 +5763,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -3804,15 +5802,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -3867,45 +5932,55 @@
         "optimization_level": 1
       },
       "circuit_file": "circuits/007-original-003.qpy",
-      "signature": "e8e602ea08d4ac947e511b88d0d256144237c08b2c3fa7ddb5d6afd350152991",
+      "signature": "45755560247e303b3833575e183f524e0713913f6b7e881fe902c794e7e56a13",
       "backend": {
-        "name": "IQMFakeGarnetBackend",
+        "name": "garnet",
         "num_qubits": 20,
         "native_operations": [
           "cz",
           "delay",
           "id",
+          "if_else",
           "measure",
-          "r"
+          "r",
+          "reset"
         ],
         "coupling_map": [
           [
-            0,
-            1
-          ],
-          [
-            0,
-            3
+            1,
+            0
           ],
           [
             1,
             4
           ],
           [
-            2,
-            3
+            3,
+            0
+          ],
+          [
+            3,
+            2
           ],
           [
             3,
             4
           ],
           [
-            4,
-            5
+            3,
+            8
+          ],
+          [
+            5,
+            4
           ],
           [
             5,
             6
+          ],
+          [
+            5,
+            10
           ],
           [
             7,
@@ -3920,20 +5995,12 @@
             12
           ],
           [
-            8,
-            3
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            8,
-            13
+            9,
+            4
           ],
           [
             9,
-            4
+            8
           ],
           [
             9,
@@ -3944,24 +6011,32 @@
             14
           ],
           [
-            10,
-            5
-          ],
-          [
-            10,
-            11
-          ],
-          [
             11,
             6
           ],
           [
-            12,
-            13
+            11,
+            10
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            12
           ],
           [
             13,
             14
+          ],
+          [
+            13,
+            17
           ],
           [
             15,
@@ -3980,20 +6055,12 @@
             19
           ],
           [
-            16,
-            11
-          ],
-          [
-            17,
-            13
-          ],
-          [
-            17,
-            18
+            18,
+            14
           ],
           [
             18,
-            14
+            17
           ],
           [
             18,
@@ -4055,7 +6122,7 @@
         },
         "compiled_depth": 44,
         "architecture": {
-          "calibration_set_id": "00000000-0000-0000-0000-000000000000",
+          "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
           "qubits": [
             "QB1",
             "QB2",
@@ -4080,9 +6147,9 @@
           ],
           "computational_resonators": [],
           "gates": {
-            "prx": {
+            "measure": {
               "implementations": {
-                "__fake": {
+                "constant": {
                   "loci": [
                     [
                       "QB1"
@@ -4147,31 +6214,250 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_fidelity": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "measure_012": {
+              "implementations": {
+                "constant": {
+                  "loci": [
+                    [
+                      "QB6"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "constant",
+              "override_default_implementation": {}
+            },
+            "prx": {
+              "implementations": {
+                "drag_crf_sx": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "drag_crf_sx",
+              "override_default_implementation": {}
+            },
+            "prx_12": {
+              "implementations": {
+                "modulated_drag_crf": {
+                  "loci": [
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB7"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB20"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "modulated_drag_crf",
               "override_default_implementation": {}
             },
             "cz": {
               "implementations": {
-                "__fake": {
+                "slepian_crf": {
                   "loci": [
                     [
-                      "QB1",
-                      "QB2"
-                    ],
-                    [
-                      "QB1",
-                      "QB4"
+                      "QB2",
+                      "QB1"
                     ],
                     [
                       "QB2",
                       "QB5"
                     ],
                     [
-                      "QB3",
-                      "QB4"
+                      "QB4",
+                      "QB1"
                     ],
                     [
-                      "QB8",
+                      "QB4",
                       "QB3"
                     ],
                     [
@@ -4179,15 +6465,11 @@
                       "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB4"
+                      "QB4",
+                      "QB9"
                     ],
                     [
-                      "QB5",
-                      "QB6"
-                    ],
-                    [
-                      "QB10",
+                      "QB6",
                       "QB5"
                     ],
                     [
@@ -4195,12 +6477,12 @@
                       "QB7"
                     ],
                     [
-                      "QB11",
-                      "QB6"
+                      "QB6",
+                      "QB11"
                     ],
                     [
-                      "QB12",
-                      "QB7"
+                      "QB8",
+                      "QB3"
                     ],
                     [
                       "QB8",
@@ -4211,12 +6493,12 @@
                       "QB13"
                     ],
                     [
-                      "QB9",
-                      "QB10"
+                      "QB10",
+                      "QB5"
                     ],
                     [
-                      "QB9",
-                      "QB14"
+                      "QB10",
+                      "QB9"
                     ],
                     [
                       "QB10",
@@ -4227,35 +6509,39 @@
                       "QB15"
                     ],
                     [
-                      "QB11",
-                      "QB12"
+                      "QB12",
+                      "QB7"
                     ],
                     [
-                      "QB16",
+                      "QB12",
                       "QB11"
                     ],
                     [
-                      "QB17",
-                      "QB12"
+                      "QB12",
+                      "QB17"
                     ],
                     [
-                      "QB13",
-                      "QB14"
+                      "QB14",
+                      "QB9"
+                    ],
+                    [
+                      "QB14",
+                      "QB13"
                     ],
                     [
                       "QB14",
                       "QB15"
                     ],
                     [
-                      "QB18",
-                      "QB14"
+                      "QB14",
+                      "QB18"
                     ],
                     [
                       "QB16",
-                      "QB15"
+                      "QB11"
                     ],
                     [
-                      "QB19",
+                      "QB16",
                       "QB15"
                     ],
                     [
@@ -4267,8 +6553,12 @@
                       "QB20"
                     ],
                     [
-                      "QB18",
-                      "QB19"
+                      "QB19",
+                      "QB15"
+                    ],
+                    [
+                      "QB19",
+                      "QB18"
                     ],
                     [
                       "QB19",
@@ -4277,18 +6567,24 @@
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "slepian_crf",
               "override_default_implementation": {}
             },
-            "measure": {
+            "reset_wait": {
               "implementations": {
-                "__fake": {
+                "reset_wait": {
                   "loci": [
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB8"
+                    ],
                     [
                       "QB1"
                     ],
                     [
-                      "QB2"
+                      "QB15"
                     ],
                     [
                       "QB3"
@@ -4297,37 +6593,34 @@
                       "QB4"
                     ],
                     [
-                      "QB5"
-                    ],
-                    [
-                      "QB6"
-                    ],
-                    [
-                      "QB7"
-                    ],
-                    [
-                      "QB8"
-                    ],
-                    [
-                      "QB9"
-                    ],
-                    [
-                      "QB10"
+                      "QB14"
                     ],
                     [
                       "QB11"
                     ],
                     [
-                      "QB12"
+                      "QB19"
+                    ],
+                    [
+                      "QB6"
                     ],
                     [
                       "QB13"
                     ],
                     [
-                      "QB14"
+                      "QB12"
                     ],
                     [
-                      "QB15"
+                      "QB7"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB9"
                     ],
                     [
                       "QB16"
@@ -4339,15 +6632,82 @@
                       "QB18"
                     ],
                     [
-                      "QB19"
-                    ],
-                    [
-                      "QB20"
+                      "QB5"
                     ]
                   ]
                 }
               },
-              "default_implementation": "__fake",
+              "default_implementation": "reset_wait",
+              "override_default_implementation": {}
+            },
+            "cc_prx": {
+              "implementations": {
+                "prx_composite": {
+                  "loci": [
+                    [
+                      "QB20"
+                    ],
+                    [
+                      "QB11"
+                    ],
+                    [
+                      "QB19"
+                    ],
+                    [
+                      "QB13"
+                    ],
+                    [
+                      "QB18"
+                    ],
+                    [
+                      "QB5"
+                    ],
+                    [
+                      "QB6"
+                    ],
+                    [
+                      "QB1"
+                    ],
+                    [
+                      "QB2"
+                    ],
+                    [
+                      "QB10"
+                    ],
+                    [
+                      "QB17"
+                    ],
+                    [
+                      "QB16"
+                    ],
+                    [
+                      "QB4"
+                    ],
+                    [
+                      "QB15"
+                    ],
+                    [
+                      "QB12"
+                    ],
+                    [
+                      "QB14"
+                    ],
+                    [
+                      "QB8"
+                    ],
+                    [
+                      "QB9"
+                    ],
+                    [
+                      "QB3"
+                    ],
+                    [
+                      "QB7"
+                    ]
+                  ]
+                }
+              },
+              "default_implementation": "prx_composite",
               "override_default_implementation": {}
             }
           }
@@ -4389,8 +6749,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.999999999999998,
-      "native_data_preservation_fidelity": 0.9999999999999984,
+      "native_full_state_fidelity": 0.9999999999999996,
+      "native_data_preservation_fidelity": 0.9999999999999997,
       "expected_syndrome": [
         0,
         0
@@ -4400,7 +6760,7 @@
         0
       ],
       "classification_from_syndrome": "I",
-      "syndrome_probability": 0.9999999999999989,
+      "syndrome_probability": 1.0,
       "compact_physical_indices": [
         0,
         1,
@@ -4421,8 +6781,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999988,
+      "native_full_state_fidelity": 0.9999999999999991,
+      "native_data_preservation_fidelity": 0.9999999999999992,
       "expected_syndrome": [
         0,
         0
@@ -4432,7 +6792,7 @@
         0
       ],
       "classification_from_syndrome": "I",
-      "syndrome_probability": 0.9999999999999993,
+      "syndrome_probability": 0.9999999999999997,
       "compact_physical_indices": [
         0,
         1,
@@ -4453,8 +6813,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999989,
+      "native_full_state_fidelity": 0.9999999999999991,
+      "native_data_preservation_fidelity": 0.9999999999999992,
       "expected_syndrome": [
         1,
         0
@@ -4464,7 +6824,7 @@
         0
       ],
       "classification_from_syndrome": "X",
-      "syndrome_probability": 0.9999999999999993,
+      "syndrome_probability": 0.9999999999999997,
       "compact_physical_indices": [
         0,
         1,
@@ -4485,8 +6845,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999984,
-      "native_data_preservation_fidelity": 0.9999999999999989,
+      "native_full_state_fidelity": 0.9999999999999993,
+      "native_data_preservation_fidelity": 0.9999999999999993,
       "expected_syndrome": [
         1,
         0
@@ -4496,7 +6856,7 @@
         0
       ],
       "classification_from_syndrome": "X",
-      "syndrome_probability": 0.9999999999999991,
+      "syndrome_probability": 1.0,
       "compact_physical_indices": [
         0,
         1,
@@ -4517,8 +6877,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999987,
+      "native_full_state_fidelity": 0.9999999999999993,
+      "native_data_preservation_fidelity": 0.9999999999999994,
       "expected_syndrome": [
         1,
         1
@@ -4528,7 +6888,7 @@
         1
       ],
       "classification_from_syndrome": "Y",
-      "syndrome_probability": 0.9999999999999991,
+      "syndrome_probability": 0.9999999999999999,
       "compact_physical_indices": [
         0,
         1,
@@ -4549,8 +6909,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999989,
+      "native_full_state_fidelity": 0.9999999999999991,
+      "native_data_preservation_fidelity": 0.9999999999999992,
       "expected_syndrome": [
         1,
         1
@@ -4560,7 +6920,7 @@
         1
       ],
       "classification_from_syndrome": "Y",
-      "syndrome_probability": 0.9999999999999993,
+      "syndrome_probability": 0.9999999999999997,
       "compact_physical_indices": [
         0,
         1,
@@ -4581,8 +6941,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999989,
+      "native_full_state_fidelity": 0.9999999999999991,
+      "native_data_preservation_fidelity": 0.9999999999999994,
       "expected_syndrome": [
         0,
         1
@@ -4592,7 +6952,7 @@
         1
       ],
       "classification_from_syndrome": "Z",
-      "syndrome_probability": 0.9999999999999993,
+      "syndrome_probability": 0.9999999999999999,
       "compact_physical_indices": [
         0,
         1,
@@ -4613,8 +6973,8 @@
     {
       "source": "ideal native-circuit statevector",
       "source_data_preservation_fidelity": 0.9999999999999989,
-      "native_full_state_fidelity": 0.9999999999999987,
-      "native_data_preservation_fidelity": 0.9999999999999989,
+      "native_full_state_fidelity": 0.9999999999999993,
+      "native_data_preservation_fidelity": 0.9999999999999994,
       "expected_syndrome": [
         0,
         1
@@ -4624,7 +6984,7 @@
         1
       ],
       "classification_from_syndrome": "Z",
-      "syndrome_probability": 0.9999999999999993,
+      "syndrome_probability": 0.9999999999999999,
       "compact_physical_indices": [
         0,
         1,
@@ -4644,8 +7004,12 @@
     }
   ],
   "hardware_data_fidelity": "not measured",
-  "imported_at_utc": "2026-11-22T00:22:56.369803+00:00",
+  "server_url": "https://resonance.iqm.tech/",
+  "quantum_computer": "garnet",
+  "calibration_pinned": false,
   "job_id": "01a20070-6eb5-7033-942a-a41474a1922e",
+  "result_success": true,
+  "completed_at_utc": "2026-11-21T23:28:21.325661+00:00",
   "raw_counts": [
     {
       "00": 186,
@@ -4696,6 +7060,8 @@
       "11": 23
     }
   ],
+  "reported_calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
+  "imported_at_utc": "2026-11-22T09:25:05.288314+00:00",
   "original_export": [
     {
       "measurement_keys": [
@@ -4809,21 +7175,21 @@
       "bytes": 945
     },
     "protocol": {
-      "filename": "manifest.json",
-      "sha256": "79655f0ce4267faafa736ea11401b95b3ed95195a7c103a77f283bd8d5b54e71",
-      "bytes": 104069
+      "filename": "job.json",
+      "sha256": "be11da617e94d96be5e647aa0bace0bd5d1839b0b67caf739b8878078c17e55e",
+      "bytes": 165034
     },
-    "job_id_basis": "user-supplied export filename/argument",
-    "configuration_basis": "array indices associated with prepared Run Ready protocol; submitted order not independently verified",
-    "matching_job_receipt_supplied": false,
+    "job_id_basis": "matching completed execution receipt and recorded execution command",
+    "configuration_basis": "experiment metadata from matching job receipt",
+    "matching_job_receipt_supplied": true,
     "original_export_bit_order": "measurement-keys",
     "bit_order_basis": "explicit character convention; independently checked with asymmetric X and Z controls",
     "conversion": "measurement_keys indexed by syn clbit, then displayed syn1syn0",
     "live_backend_identity_verified": false,
-    "live_layout_verified": false,
-    "calibration_linkage_verified": false,
+    "live_layout_verified": true,
+    "calibration_linkage_verified": true,
     "run_timestamps_available_in_export": false,
-    "native_artifact_scope": "prepared offline circuits; correspondence to actual submitted native circuits needs original receipt",
+    "native_artifact_scope": "execution QPY exactly matches the client-saved native definition and receipt",
     "logical_state_fidelity": "not measured; only the two syndrome ancillas were read",
     "asymmetric_control_checks": [
       {
@@ -4887,6 +7253,11 @@
         "expected_is_unique_mode": true
       }
     ],
-    "asymmetric_controls_support_declared_order": true
+    "asymmetric_controls_support_declared_order": true,
+    "recorded_backend_identity_verified": true,
+    "receipt_counts_match_dashboard_export": true,
+    "export_order_verified_against_sdk_receipt": true,
+    "verification_scope": "local audit of supplied runtime records; no fresh server query",
+    "audit_file": "receipt-audit.json"
   }
 }

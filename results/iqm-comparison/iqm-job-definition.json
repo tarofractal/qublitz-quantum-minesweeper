@@ -1,0 +1,5492 @@
+{
+  "circuits": [
+    {
+      "name": "QM_original_000",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB4",
+            "QB3",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 18.84955592153876
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -5.497787143782138
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 21.99114857512855
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_improved_000",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.0685834705770345
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_improved_001",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.0685834705770345
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_original_001",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB4",
+            "QB3",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 18.84955592153876
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -5.497787143782138
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 21.99114857512855
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_original_002",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB4",
+            "QB3",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 18.84955592153876
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -5.497787143782138
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 21.99114857512855
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_improved_002",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.0685834705770345
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_improved_003",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB5",
+            "QB2",
+            "QB9",
+            "QB4",
+            "QB1",
+            "QB10"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 23.561944901923447
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.0685834705770345
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB10",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 17.27875959474386
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB10"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "QM_original_003",
+      "instructions": [
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB4",
+            "QB3",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "barrier",
+          "locus": [
+            "QB3",
+            "QB4",
+            "QB1",
+            "QB2",
+            "QB9",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 15.707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 9.42477796076938
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 21.991148575128552
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 20.420352248333657
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 1.5707963267948966
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB3"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 12.566370614359172
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB3"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -5.497787143782138
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948963,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948966,
+            "phase": 6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB2",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB9"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB1"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 10.995574287564276
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB1"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -4.71238898038469
+          },
+          "implementation": null
+        },
+        {
+          "name": "cz",
+          "locus": [
+            "QB4",
+            "QB5"
+          ],
+          "args": {},
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 25.132741228718345
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 14.137166941154069
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB5"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -6.283185307179586
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 1.5707963267948968,
+            "phase": 7.853981633974483
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": -3.141592653589793,
+            "phase": 0.0
+          },
+          "implementation": null
+        },
+        {
+          "name": "prx",
+          "locus": [
+            "QB9"
+          ],
+          "args": {
+            "angle": 3.141592653589793,
+            "phase": -3.141592653589793
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB2"
+          ],
+          "args": {
+            "key": "syn_2_0_0"
+          },
+          "implementation": null
+        },
+        {
+          "name": "measure",
+          "locus": [
+            "QB4"
+          ],
+          "args": {
+            "key": "syn_2_0_1"
+          },
+          "implementation": null
+        }
+      ],
+      "metadata": {}
+    }
+  ],
+  "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
+  "qubit_mapping": null,
+  "shots": 256,
+  "max_circuit_duration_over_t2": null,
+  "heralding_mode": "none",
+  "move_gate_validation": "strict",
+  "move_gate_frame_tracking": "full",
+  "active_reset_cycles": null,
+  "dd_mode": "disabled",
+  "dd_strategy": null,
+  "move_validation_mode": "strict",
+  "move_gate_frame_tracking_mode": "full"
+}

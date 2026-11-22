@@ -1,0 +1,334 @@
+{
+  "source": "local audit of user-supplied IQM execution evidence; no new hardware run",
+  "job_id": "01a20070-6eb5-7033-942a-a41474a1922e",
+  "backend": "garnet",
+  "circuits": 8,
+  "shots_per_circuit": 256,
+  "total_shots": 2048,
+  "receipt_counts_match_dashboard_export": true,
+  "export_bit_order_verified_against_sdk_receipt": "measurement-keys; Qiskit display syn1syn0",
+  "matching_job_receipt_supplied": true,
+  "native_definition_matches_qpy": true,
+  "recorded_layout_verified": true,
+  "recorded_calibration_linkage_verified": true,
+  "calibration_set_id": "ea681de1-9661-41e5-bd6f-cb524fa056a6",
+  "calibration_snapshot_sha256": "cc477712d00657ba7b7109c51cd1db91488154cb3c83816935f7043cc041eec8",
+  "fresh_server_query_performed": false,
+  "postselection": "none",
+  "retained_fraction": 1.0,
+  "case_checks": [
+    {
+      "index": 0,
+      "variant": "original",
+      "case_id": "+i_I_None",
+      "native_name": "QM_original_000",
+      "signature": "53bea7d104b02e7eedde235aa0c80ad9e8d50d414af850079425affac8e3a2bb",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 24,
+      "native_r": 51,
+      "depth": 44,
+      "syndrome_sites_s0s1": [
+        "QB2",
+        "QB4"
+      ],
+      "initial_source_device_sites": [
+        "QB4",
+        "QB3",
+        "QB1",
+        "QB2",
+        "QB9",
+        "QB5"
+      ],
+      "final_source_device_sites": [
+        "QB3",
+        "QB9",
+        "QB1",
+        "QB5",
+        "QB2",
+        "QB4"
+      ]
+    },
+    {
+      "index": 1,
+      "variant": "improved",
+      "case_id": "+i_I_None",
+      "native_name": "QM_improved_000",
+      "signature": "15c2c75be891ac0808451d20d368ef32f32c72c8712f04f794de7b5fbd0fe957",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 11,
+      "native_r": 32,
+      "depth": 16,
+      "syndrome_sites_s0s1": [
+        "QB1",
+        "QB10"
+      ],
+      "initial_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ],
+      "final_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ]
+    },
+    {
+      "index": 2,
+      "variant": "improved",
+      "case_id": "+i_X_1",
+      "native_name": "QM_improved_001",
+      "signature": "d2f346da5abaee224d2922f297b11b94b7c25c8a4084a9dbc418de357fba954b",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 11,
+      "native_r": 33,
+      "depth": 17,
+      "syndrome_sites_s0s1": [
+        "QB1",
+        "QB10"
+      ],
+      "initial_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ],
+      "final_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ]
+    },
+    {
+      "index": 3,
+      "variant": "original",
+      "case_id": "+i_X_1",
+      "native_name": "QM_original_001",
+      "signature": "52f00c2a302acc7f22adb7df181343bc0ba370caff756567fee249706a342220",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 24,
+      "native_r": 52,
+      "depth": 45,
+      "syndrome_sites_s0s1": [
+        "QB2",
+        "QB4"
+      ],
+      "initial_source_device_sites": [
+        "QB4",
+        "QB3",
+        "QB1",
+        "QB2",
+        "QB9",
+        "QB5"
+      ],
+      "final_source_device_sites": [
+        "QB3",
+        "QB9",
+        "QB1",
+        "QB5",
+        "QB2",
+        "QB4"
+      ]
+    },
+    {
+      "index": 4,
+      "variant": "original",
+      "case_id": "+i_Y_1",
+      "native_name": "QM_original_002",
+      "signature": "898372705ff8136b5b61b17a590ae0385831859b00669f36017f94405f1a3cf5",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 24,
+      "native_r": 52,
+      "depth": 45,
+      "syndrome_sites_s0s1": [
+        "QB2",
+        "QB4"
+      ],
+      "initial_source_device_sites": [
+        "QB4",
+        "QB3",
+        "QB1",
+        "QB2",
+        "QB9",
+        "QB5"
+      ],
+      "final_source_device_sites": [
+        "QB3",
+        "QB9",
+        "QB1",
+        "QB5",
+        "QB2",
+        "QB4"
+      ]
+    },
+    {
+      "index": 5,
+      "variant": "improved",
+      "case_id": "+i_Y_1",
+      "native_name": "QM_improved_002",
+      "signature": "66973bf87b024fbcd25c75ed368eafad9e740bf00304132ae76902a55259f98a",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 11,
+      "native_r": 33,
+      "depth": 17,
+      "syndrome_sites_s0s1": [
+        "QB1",
+        "QB10"
+      ],
+      "initial_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ],
+      "final_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ]
+    },
+    {
+      "index": 6,
+      "variant": "improved",
+      "case_id": "+i_Z_1",
+      "native_name": "QM_improved_003",
+      "signature": "e5d48a906305fe77bd2b00db878821e95b29ad60559decd6a9e7277104369f5e",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 11,
+      "native_r": 32,
+      "depth": 16,
+      "syndrome_sites_s0s1": [
+        "QB1",
+        "QB10"
+      ],
+      "initial_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ],
+      "final_source_device_sites": [
+        "QB5",
+        "QB2",
+        "QB9",
+        "QB4",
+        "QB1",
+        "QB10"
+      ]
+    },
+    {
+      "index": 7,
+      "variant": "original",
+      "case_id": "+i_Z_1",
+      "native_name": "QM_original_003",
+      "signature": "45755560247e303b3833575e183f524e0713913f6b7e881fe902c794e7e56a13",
+      "native_definition_matches_qpy": true,
+      "recorded_target_supported": true,
+      "native_cz": 24,
+      "native_r": 51,
+      "depth": 44,
+      "syndrome_sites_s0s1": [
+        "QB2",
+        "QB4"
+      ],
+      "initial_source_device_sites": [
+        "QB4",
+        "QB3",
+        "QB1",
+        "QB2",
+        "QB9",
+        "QB5"
+      ],
+      "final_source_device_sites": [
+        "QB3",
+        "QB9",
+        "QB1",
+        "QB5",
+        "QB2",
+        "QB4"
+      ]
+    }
+  ],
+  "variants": {
+    "original": {
+      "successes": 759,
+      "shots": 1024,
+      "success_rate": 0.7412109375,
+      "wilson_95": [
+        0.7135192985612115,
+        0.7670995709741706
+      ]
+    },
+    "improved": {
+      "successes": 921,
+      "shots": 1024,
+      "success_rate": 0.8994140625,
+      "wilson_95": [
+        0.8794728394507054,
+        0.91636974208764
+      ]
+    }
+  },
+  "changes_against_original": {
+    "improved": {
+      "change_percentage_points": 15.8203125,
+      "newcombe_wilson_95_percentage_points": [
+        12.55247878351187,
+        19.06734489496457
+      ],
+      "method": "Newcombe/Wilson independent-binomial approximation; no model for correlated device drift"
+    }
+  },
+  "limitations": [
+    "Native definition is client-saved, not an independently retrieved server payload.",
+    "Only syndrome ancillas were measured; hardware logical-state fidelity is unavailable."
+  ],
+  "artifacts": {
+    "receipt": {
+      "filename": "job.json",
+      "sha256": "be11da617e94d96be5e647aa0bace0bd5d1839b0b67caf739b8878078c17e55e",
+      "bytes": 165034
+    },
+    "native_definition": {
+      "filename": "iqm-job-definition.json",
+      "sha256": "39102c0f672d1402f867f4d08ef2a3d0fe74206438b3e1aaba7caff4244b607d",
+      "bytes": 115813
+    },
+    "native_qpy": {
+      "filename": "all-native.qpy",
+      "sha256": "272bee1e76a769f64401f24b4899b943ee158cc65032490e2a148d8535400635",
+      "bytes": 42472
+    },
+    "calibration": {
+      "filename": "calibration.json",
+      "sha256": "cc477712d00657ba7b7109c51cd1db91488154cb3c83816935f7043cc041eec8",
+      "bytes": 216341
+    }
+  },
+  "archived_offline_packet_byte_identical": false
+}

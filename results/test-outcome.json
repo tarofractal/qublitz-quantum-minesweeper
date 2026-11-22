@@ -1,9 +1,9 @@
 {
-  "tests": 744,
+  "tests": 803,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "created_at_utc": "2026-11-22T00:22:39.455757+00:00",
+  "created_at_utc": "2026-11-22T09:24:54.659429+00:00",
   "returncode": 0,
   "command": "python scripts/run_tests.py",
   "pytest_command": "python -m pytest -q --junitxml=results/pytest.xml"

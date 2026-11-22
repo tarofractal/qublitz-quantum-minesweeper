@@ -10,11 +10,28 @@ from .optimized_level4 import stages as optimized_stages
 from .states import preparation
 
 
-def _compact_unitary(compiled):
-    unitary=compiled.remove_final_measurements(inplace=False)
+def source_layout_indices(compiled):
+    """Return source-wire mappings without relying on layout dictionary order.
+
+    QPY can restore Layout entries in physical rather than source order.
+    Qiskit 2.1.2's filtered initial_index_layout iterates only its first N
+    entries, which can then IndexError or omit source wires. The unfiltered
+    array is indexed by input_qubit_mapping and is safe to slice afterwards.
+    """
     if compiled.layout is None:
         raise ValueError("Native state verification needs the compiled final layout")
-    final=compiled.layout.final_index_layout(filter_ancillas=True)
+    final = compiled.layout.final_index_layout(filter_ancillas=True)
+    initial = compiled.layout.initial_index_layout(filter_ancillas=False)[:len(final)]
+    for indices in (initial, final):
+        if (len(indices) != len(final) or len(set(indices)) != len(indices)
+                or any(not isinstance(q, int) or not 0 <= q < compiled.num_qubits for q in indices)):
+            raise ValueError("Invalid source-to-physical wire mapping")
+    return initial, final
+
+
+def _compact_unitary(compiled):
+    unitary=compiled.remove_final_measurements(inplace=False)
+    _,final=source_layout_indices(compiled)
     if len(final)!=6:raise ValueError("Expected six source wires in final layout")
     active=set(final)
     for item in unitary.data:
